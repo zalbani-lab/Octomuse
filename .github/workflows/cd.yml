@@ -14,6 +14,6 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: |
-            cd /var/www/Website-Under-Construction
+            cd /var/www/Octomuse
             git pull origin main
             git status
