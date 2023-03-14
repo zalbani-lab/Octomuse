@@ -132,163 +132,83 @@ body header div {
   align-items: center;
   justify-content: space-between;
 }
-
-.carroussel {
-  background-color: #FFFFFF;
-  width: 100%;
-  height: 100px;
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px 0;
-}
-.carroussel p {
-  font-size: 18px;
-  text-transform: uppercase;
+body button {
+  font-family: "Neusa-DemiBold";
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  border: none;
+  margin-top: 48px;
 }
 
-.hero {
+.heroPortfolio {
   width: 80%;
-  margin: auto 10%;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  font-family: "Glook";
+  font-size: 42px;
+  line-height: 80px;
+}
+.heroPortfolio p {
+  width: 30%;
+  margin-top: 200px;
+}
+
+.filters {
+  margin-top: 120px;
+  width: 50%;
+}
+.filters li {
+  font-family: "Neusa-DemiBold";
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.listProject {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-.hero div {
-  width: 55%;
-}
-.hero div h1 {
-  position: relative;
-  font-family: "Glook";
-  font-size: 60px;
-  line-height: 70px;
-}
-.hero div h1::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 30%;
-  left: 60%;
-  background-image: url("../img/image/stars_white.svg");
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-.hero div p {
-  font-size: 24px;
-  line-height: 34px;
-  margin-bottom: 42px;
-}
-.hero div p span {
-  font-family: "Neusa-Medium";
-}
-
-.project {
+.listProject .projetType {
+  width: 45%;
   background-color: #083837;
   color: #F4F0EE;
-  width: 100%;
-  padding: 60px 0;
+  padding: 24px;
+  margin: 12px 0;
+  border-radius: 12px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
-.project h2 {
-  margin-bottom: 60px;
-}
-.project .projectListHome {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 60px;
-}
-.project .projectListHome div {
-  border: solid 1px #F4F0EE;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  margin: auto 10px;
-  width: 400px;
+.listProject .projetType div {
   position: relative;
+  width: 50%;
 }
-.project .projectListHome div::after {
+.listProject .projetType div::after {
+  z-index: 1;
   content: "";
   position: absolute;
   background: url("../img/icone/arrow.png") no-repeat;
   background-size: cover;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   bottom: 30px;
-  left: 60%;
-  transform: translateX(-50%);
+  right: -80px;
 }
-.project .projectListHome div h3 {
-  margin-left: 20px;
+.listProject .projetType div span {
+  font-family: "Neusa-DemiBold";
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  background-color: rgba(244, 240, 238, 0.168627451);
+  padding: 4px 8px;
+  border-radius: 2px;
 }
-.project .projectListHome div img {
+.listProject .projetType img {
+  border-radius: 12px;
   opacity: 40%;
-  border-radius: 10px;
-  width: 40%;
-}
-
-.prestationsHome {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 72%, rgba(255, 255, 255, 0) 100%);
-  width: 70%;
-  margin: 120px 0 30px 0;
-  padding: 5%;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-around;
-}
-.prestationsHome .titlePrestaHome {
-  position: relative;
-  width: 40%;
-  margin: 60px 0 0 100px;
-}
-.prestationsHome .titlePrestaHome::before {
-  position: absolute;
-  content: "";
-  background: url("../img/image/slogan_circulaire.png") no-repeat;
-  background-size: cover;
-  width: 180px;
-  height: 159.08px;
-  top: -42px;
-  left: -60px;
-}
-.prestationsHome .titlePrestaHome h2 {
-  margin-bottom: 60px;
-}
-.prestationsHome .listPresta {
-  width: 45%;
-}
-.prestationsHome .listPresta div {
-  display: flex;
-  border: 1px solid #ECD3D3;
-  border-radius: 10px;
-  width: 100%;
-  margin-bottom: 12px;
-}
-.prestationsHome .listPresta div:last-of-type {
-  margin-bottom: 0;
-}
-.prestationsHome .listPresta div img {
-  width: 48px;
-  height: auto;
-  margin: 0 24px;
-}
-
-.particularyAsk {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #083837;
-  color: #F4F0EE;
-  width: 70%;
-  padding: 1% 5%;
-  border-radius: 10px;
-}
-.particularyAsk p {
-  width: 55%;
 }
 
 .contactModule {
@@ -347,4 +267,4 @@ footer .logoFooter {
   height: auto;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=portfolio.css.map */
