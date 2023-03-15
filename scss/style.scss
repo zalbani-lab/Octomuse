@@ -224,7 +224,8 @@ body {
         align-items: flex-start;
         margin-bottom: 60px;
 
-        div {
+        a {
+            color: $secondary-color;
             border: solid 1px $secondary-color;
             border-radius: 10px;
             padding: 10px;

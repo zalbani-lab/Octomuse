@@ -201,7 +201,8 @@ body header div {
   align-items: flex-start;
   margin-bottom: 60px;
 }
-.project .projectListHome div {
+.project .projectListHome a {
+  color: #F4F0EE;
   border: solid 1px #F4F0EE;
   border-radius: 10px;
   padding: 10px;
@@ -210,7 +211,7 @@ body header div {
   width: 400px;
   position: relative;
 }
-.project .projectListHome div::after {
+.project .projectListHome a::after {
   content: "";
   position: absolute;
   background: url("../img/icone/arrow.png") no-repeat;
@@ -221,10 +222,10 @@ body header div {
   left: 60%;
   transform: translateX(-50%);
 }
-.project .projectListHome div h3 {
+.project .projectListHome a h3 {
   margin-left: 20px;
 }
-.project .projectListHome div img {
+.project .projectListHome a img {
   opacity: 40%;
   border-radius: 10px;
   width: 40%;
