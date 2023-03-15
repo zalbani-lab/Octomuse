@@ -244,6 +244,35 @@ body button {
   width: 30%;
 }
 
+.contactModule {
+  width: 60%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 120px 0;
+}
+.contactModule::after {
+  z-index: -2;
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: 0;
+  border-radius: 800px;
+  background: radial-gradient(circle, #ECD3D3 20%, rgba(244, 240, 238, 0.3098039216) 60%);
+  width: 600px;
+  height: 600px;
+}
+.contactModule div {
+  width: 55%;
+}
+.contactModule div p {
+  margin-bottom: 42px;
+}
+.contactModule img {
+  width: 30%;
+}
+
 /*********************************************/
 /******************* FOOTER ******************/
 /*********************************************/
