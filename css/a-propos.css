@@ -108,6 +108,7 @@ body::before {
   position: absolute;
   background-image: url("../img/image/courbe.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100%;
 }
@@ -119,8 +120,8 @@ body::after {
   left: 20%;
   border-radius: 800px;
   background: radial-gradient(circle, #ECD3D3 20%, rgba(244, 240, 238, 0.3098039216) 60%);
-  width: 800px;
-  height: 800px;
+  width: 60%;
+  height: 70%;
 }
 body header {
   font-family: "Neusa-SemiBold";
@@ -131,8 +132,11 @@ body header {
   justify-content: space-between;
   margin: 24px 0 60px 0;
 }
-body header div {
-  width: 40%;
+body header .menu {
+  display: none;
+}
+body header nav {
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -159,7 +163,7 @@ body button {
 }
 .heroAbout div img {
   width: 260px;
-  height: auto;
+  height: 320px;
   rotate: -4deg;
 }
 .heroAbout div p {
@@ -199,8 +203,8 @@ body button {
   left: 20%;
   border-radius: 800px;
   background: radial-gradient(circle, #ECD3D3 20%, rgba(244, 240, 238, 0.3098039216) 60%);
-  width: 800px;
-  height: 800px;
+  width: 50%;
+  height: 80%;
 }
 .experience .experienceType {
   display: flex;
@@ -294,8 +298,8 @@ body button {
   right: 0;
   border-radius: 800px;
   background: radial-gradient(circle, #ECD3D3 20%, rgba(244, 240, 238, 0.3098039216) 60%);
-  width: 600px;
-  height: 600px;
+  width: 60%;
+  height: 100%;
 }
 .contactModule div {
   width: 55%;
@@ -343,6 +347,156 @@ footer .logoFooter {
   width: 100px;
   height: auto;
   margin: 24px 0;
+}
+
+/*********************************************/
+/***************** RESPONSIVE ****************/
+/*********************************************/
+@media (max-width: 1280px) {
+  body header nav {
+    width: 60%;
+  }
+  body .experienceType div {
+    width: 40%;
+  }
+  body .experienceType .description {
+    width: 55%;
+  }
+  body .contactModule {
+    width: 80%;
+  }
+}
+@media (max-width: 960px) {
+  body hr {
+    margin-bottom: 24px;
+  }
+  body::after {
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+  body header .menu {
+    display: block;
+  }
+  body header nav {
+    display: none;
+  }
+  body .heroAbout {
+    width: 90%;
+  }
+  body .heroAbout h1 {
+    font-size: 48px;
+  }
+  body .heroAbout div {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+  }
+  body .heroAbout div p {
+    width: 100%;
+    margin-top: 42px;
+    font-size: 18px;
+  }
+  body .skills {
+    width: 90%;
+    flex-direction: column;
+  }
+  body .skills div {
+    width: 100%;
+  }
+  body .experience {
+    width: 90%;
+  }
+  body .experience::after {
+    width: 300px;
+    height: 300px;
+    top: -5%;
+    left: -10%;
+  }
+  body .experience .experienceType {
+    flex-direction: column;
+  }
+  body .experience .experienceType div {
+    width: 100%;
+  }
+  body .experience .experienceType .description {
+    width: 100%;
+    font-size: 18px;
+    line-height: 36px;
+  }
+  body .projectModule {
+    margin: 0;
+  }
+  body .projectModule h2 {
+    margin: 20px;
+  }
+  body .projectModule .listProject {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .projectModule .listProject a {
+    width: 80%;
+    flex-direction: column-reverse;
+    padding: 16px;
+  }
+  body .projectModule .listProject a:first-of-type {
+    margin-bottom: 42px;
+  }
+  body .projectModule .listProject a::after {
+    right: 0;
+    bottom: -25px;
+    left: initial;
+  }
+  body .projectModule .listProject a img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+  body .projectModule .listProject a h3 {
+    line-height: 32px;
+    margin: 16px 0 30px 0;
+  }
+  body .contactModule {
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+  body .contactModule::after {
+    width: 300px;
+    height: 300px;
+    top: -10%;
+    right: 0;
+  }
+  body .contactModule div {
+    width: 100%;
+    text-align: center;
+  }
+  body .contactModule img {
+    width: 30%;
+  }
+  body footer {
+    flex-direction: column;
+    align-items: normal;
+    padding: 48px 0;
+  }
+  body footer ul {
+    align-items: normal;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 36px;
+  }
+  body footer ul li {
+    margin-bottom: 20px;
+  }
+  body footer div {
+    justify-content: normal;
+    margin-left: 30px;
+  }
+  body footer div a {
+    margin-right: 20px;
+  }
+  body footer .logoFooter {
+    margin: 60px 0 20px 30px;
+  }
 }
 
 /*# sourceMappingURL=a-propos.css.map */
