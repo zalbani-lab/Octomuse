@@ -138,7 +138,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 24px 60px 60px 60px;
+        margin: 24px 0 60px 0;
 
         div {
             width: 40%;
@@ -167,7 +167,6 @@ body {
 
 .hero {
     width: 80%;
-    margin: auto 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -220,6 +219,7 @@ body {
     }
 
     .projectListHome {
+        width: 100%;
         display: flex;
         align-items: flex-start;
         margin-bottom: 60px;
