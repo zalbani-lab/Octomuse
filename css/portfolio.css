@@ -126,8 +126,11 @@ body header {
   justify-content: space-between;
   margin: 24px 60px 60px 60px;
 }
-body header div {
-  width: 40%;
+body header .menu {
+  display: none;
+}
+body header nav {
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -159,6 +162,7 @@ body button {
 }
 
 .filters {
+  justify-content: center;
   margin-top: 120px;
   width: 40%;
 }
@@ -168,6 +172,9 @@ body button {
   padding: 8px 18px;
   border-radius: 5px;
   font-family: "Neusa-SemiBold";
+}
+.filters li {
+  margin-left: 12px;
 }
 .filters li button {
   font-family: "Neusa";
@@ -314,6 +321,140 @@ footer .logoFooter {
   width: 100px;
   height: auto;
   margin: 24px 0;
+}
+
+/*********************************************/
+/***************** RESPONSIVE ****************/
+/*********************************************/
+@media (max-width: 1280px) {
+  body header nav {
+    width: 60%;
+  }
+  body .experienceType div {
+    width: 40%;
+  }
+  body .experienceType .description {
+    width: 55%;
+  }
+  body .filters {
+    margin-top: 60px;
+    width: 60%;
+  }
+  body .listProject {
+    width: 90%;
+  }
+  body .listProject .projetType {
+    width: 43%;
+  }
+  body .contactModule {
+    width: 80%;
+  }
+}
+@media (max-width: 960px) {
+  body h2 {
+    font-size: 1.875rem;
+  }
+  body hr {
+    margin-bottom: 24px;
+  }
+  body::after {
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+  body header .menu {
+    display: block;
+  }
+  body header nav {
+    display: none;
+  }
+  body .heroPortfolio {
+    flex-direction: column;
+    width: 90%;
+  }
+  body .heroPortfolio h1 {
+    font-size: 3rem;
+    line-height: 58px;
+    margin-bottom: 0;
+  }
+  body .heroPortfolio p {
+    width: 100%;
+    margin: 18px 0 0 0;
+  }
+  body .filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+  }
+  body .filters li button {
+    margin-top: 12px;
+  }
+  body .listProject {
+    flex-direction: column;
+  }
+  body .listProject .projetType {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column-reverse;
+    margin: 0 0 30px 0;
+  }
+  body .listProject .projetType div {
+    width: 100%;
+    margin: 30px 0 36px 0;
+  }
+  body .listProject .projetType div::after {
+    left: 0;
+    bottom: -20%;
+  }
+  body .listProject .projetType img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  body button {
+    margin-top: 24px;
+  }
+  body .contactModule {
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+  body .contactModule::after {
+    width: 300px;
+    height: 300px;
+    top: -10%;
+    right: 0;
+  }
+  body .contactModule div {
+    width: 100%;
+    text-align: center;
+  }
+  body .contactModule img {
+    width: 30%;
+  }
+  body footer {
+    flex-direction: column;
+    align-items: normal;
+    padding: 48px 0;
+  }
+  body footer ul {
+    align-items: normal;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 36px;
+  }
+  body footer ul li {
+    margin-bottom: 20px;
+  }
+  body footer div {
+    justify-content: normal;
+    margin-left: 30px;
+  }
+  body footer div a {
+    margin-right: 20px;
+  }
+  body footer .logoFooter {
+    margin: 60px 0 20px 30px;
+  }
 }
 
 /*# sourceMappingURL=portfolio.css.map */
