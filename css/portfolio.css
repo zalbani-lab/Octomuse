@@ -137,6 +137,7 @@ body button {
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: underline;
+  text-transform: uppercase;
   border: none;
   margin-top: 48px;
 }
@@ -159,13 +160,24 @@ body button {
 
 .filters {
   margin-top: 120px;
-  width: 50%;
+  width: 40%;
 }
-.filters li {
-  font-family: "Neusa-DemiBold";
+.filters .actif button {
+  background-color: #083837;
+  color: #F4F0EE;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-family: "Neusa-SemiBold";
+}
+.filters li button {
+  font-family: "Neusa";
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  background-color: rgba(8, 56, 55, 0.1607843137);
+  padding: 8px 18px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .listProject {
