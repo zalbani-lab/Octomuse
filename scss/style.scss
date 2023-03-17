@@ -1,3 +1,9 @@
+@use 'sass:math';
+
+@function pxToRem($size) {
+    @return math.div($size, 16px) * 1rem;
+}
+
 @font-face {
     font-family: 'Neusa';
     src: url(../font/Neusa-Regular.otf);
@@ -33,24 +39,24 @@ $third-color : #ECD3D3;
 
 h2 {
     font-family: 'Glook';
-    font-size: 36px;
+    font-size: pxToRem(36px);
 }
 
 h3 {
     font-family: 'Glook';
-    font-size: 24px;
+    font-size: pxToRem(24px);
 }
 
 h4 {
     font-family: 'Neusa-DemiBold';
-    font-size: 20px;
+    font-size: pxToRem(20px);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 p {
     font-family: 'Neusa';
-    font-size: 16px;
+    font-size: pxToRem(16px);
     line-height: 26px;
     letter-spacing: 2px;
 }
@@ -59,7 +65,7 @@ a {
     text-decoration: none;
     color: $primary-color;
     letter-spacing: 2px;
-    font-size: 16px;
+    font-size: pxToRem(16px);
 }
 
 li {
@@ -160,7 +166,7 @@ body {
     padding: 24px 0;
 
     p {
-        font-size: 18px;
+        font-size: pxToRem(18px);
         text-transform: uppercase;
     }
 }
@@ -177,7 +183,7 @@ body {
         h1 {
             position: relative;
             font-family: 'Glook';
-            font-size: 60px;
+            font-size: pxToRem(60px);
             line-height: 70px;
 
             &::after {
@@ -194,7 +200,7 @@ body {
         }
 
         p {
-            font-size: 24px;
+            font-size: pxToRem(24p);
             line-height: 34px;
             margin-bottom: 42px;
 
@@ -375,7 +381,7 @@ footer {
         a {
             color: $secondary-color;
             font-family: 'Neusa-DemiBold';
-            font-size: 16px;
+            font-size: pxToRem(16px);
             letter-spacing: 2px;
             text-transform: uppercase;
         }

@@ -23,24 +23,24 @@
 /*********************************************/
 h2 {
   font-family: "Glook";
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 h3 {
   font-family: "Glook";
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 h4 {
   font-family: "Neusa-DemiBold";
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 p {
   font-family: "Neusa";
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 26px;
   letter-spacing: 2px;
 }
@@ -49,7 +49,7 @@ a {
   text-decoration: none;
   color: #083837;
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 li {
@@ -134,7 +134,7 @@ body header div {
 }
 body button {
   font-family: "Neusa-DemiBold";
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-decoration: underline;
   text-transform: uppercase;
@@ -151,7 +151,7 @@ body button {
   line-height: 80px;
 }
 .heroPortfolio h1 {
-  font-size: 80px;
+  font-size: 5rem;
 }
 .heroPortfolio p {
   width: 30%;
@@ -171,7 +171,7 @@ body button {
 }
 .filters li button {
   font-family: "Neusa";
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: rgba(8, 56, 55, 0.1607843137);
@@ -216,7 +216,7 @@ body button {
 .listProject .projetType div span {
   font-family: "Neusa-DemiBold";
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 2px;
   background-color: rgba(244, 240, 238, 0.168627451);
   padding: 4px 8px;
@@ -301,7 +301,7 @@ footer ul {
 footer ul a {
   color: #F4F0EE;
   font-family: "Neusa-DemiBold";
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }

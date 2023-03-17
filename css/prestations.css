@@ -23,24 +23,24 @@
 /*********************************************/
 h2 {
   font-family: "Glook";
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 h3 {
   font-family: "Glook";
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 h4 {
   font-family: "Neusa-DemiBold";
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 p {
   font-family: "Neusa";
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 26px;
   letter-spacing: 2px;
 }
@@ -49,7 +49,7 @@ a {
   text-decoration: none;
   color: #083837;
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 li {
@@ -142,7 +142,7 @@ body header nav {
 }
 body button {
   font-family: "Neusa-DemiBold";
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-decoration: underline;
   border: none;
@@ -153,7 +153,7 @@ body button {
   width: 80%;
 }
 .heroPresta h1 {
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 70px;
 }
 
@@ -250,7 +250,7 @@ body button {
 }
 .projectModule button {
   font-family: "Neusa-DemiBold";
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-decoration: underline;
   border: none;
@@ -275,7 +275,7 @@ footer ul {
 footer ul a {
   color: #F4F0EE;
   font-family: "Neusa-DemiBold";
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -319,7 +319,7 @@ footer .logoFooter {
 }
 @media (max-width: 960px) {
   body h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   body hr {
     margin-bottom: 24px;
@@ -336,7 +336,7 @@ footer .logoFooter {
     display: none;
   }
   body .heroPresta h1 {
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 58px;
   }
   body .Presta .listPrest div {
