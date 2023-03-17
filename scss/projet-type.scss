@@ -134,7 +134,11 @@ body {
         justify-content: space-between;
         margin: 24px 60px 60px 60px;
 
-        div {
+        .menu {
+            display: none;
+        }
+
+        nav {
             width: 40%;
             display: flex;
             align-items: center;
@@ -368,5 +372,191 @@ footer {
         width: 100px;
         height: auto;
         margin: 24px 0;
+    }
+}
+
+/*********************************************/
+/***************** RESPONSIVE ****************/
+/*********************************************/
+
+@media (max-width: 1280px) {
+    body {
+        header {
+            nav {
+                width: 60%;
+            }
+        }
+
+        .contactModule {
+            .content {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    body {
+
+        h2 {
+            font-size: 30px;
+        }
+
+        hr {
+            margin-bottom: 24px;
+        }
+
+        &::after {
+            left: 0;
+            width: 300px;
+            height: 300px;
+        }
+
+        header {
+            .menu {
+                display: block;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        .heroProjectType {
+            flex-direction: column;
+            width: 90%;
+
+            .descriptionProject {
+                width: 100%;
+
+                h1 {
+                    font-size: 48px;
+                    margin-bottom: 0;
+                }
+            }
+
+            img {
+                margin-top: 60px;
+                width: 100%;
+            }
+        }
+
+        .explicationProject {
+            flex-direction: column;
+            width: 90%;
+            margin: 42px 0;
+
+            h2 {
+                br {
+                    display: none;
+                }
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+
+        .pictureProject {
+            flex-direction: column;
+            width: 90%;
+
+            .littlePicture {
+                width: 100%;
+            }
+        }
+
+        .projectModule {
+            margin: 60px 0;
+
+            .listProject {
+                flex-direction: column;
+                align-items: center;
+
+                a {
+                    width: 80%;
+                    flex-direction: column-reverse;
+                    padding: 16px;
+
+                    &:first-of-type {
+                        margin-bottom: 42px;
+                    }
+
+                    &::after {
+                        right: 0;
+                        bottom: -25px;
+                        left: initial;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+
+                    h3 {
+                        line-height: 32px;
+                        margin: 16px 0 30px 0;
+                    }
+                }
+            }
+        }
+
+        .contactModule {
+            width: 100%;
+
+            .content {
+                width: 90%;
+                flex-direction: column-reverse;
+
+                &::after {
+                    width: 300px;
+                    height: 300px;
+                    top: -10%;
+                    right: initial;
+                }
+
+
+                div {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                img {
+                    width: 30%;
+                }
+            }
+        }
+
+        footer {
+            flex-direction: column;
+            align-items: normal;
+            padding: 48px 0;
+            height: auto;
+
+            ul {
+                align-items: normal;
+                flex-direction: column;
+                width: 80%;
+                margin-left: 36px;
+
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+
+            div {
+                justify-content: normal;
+                margin-left: 30px;
+
+                a {
+                    margin-right: 20px;
+                }
+            }
+
+            .logoFooter {
+                margin: 60px 0 20px 30px;
+            }
+        }
     }
 }
