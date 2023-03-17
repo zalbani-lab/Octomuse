@@ -367,6 +367,9 @@ footer .logoFooter {
   }
 }
 @media (max-width: 960px) {
+  body h2 {
+    font-size: 30px;
+  }
   body hr {
     margin-bottom: 24px;
   }
@@ -427,9 +430,6 @@ footer .logoFooter {
   body .projectModule {
     margin: 0;
   }
-  body .projectModule h2 {
-    margin: 20px;
-  }
   body .projectModule .listProject {
     flex-direction: column;
     align-items: center;
@@ -449,7 +449,7 @@ footer .logoFooter {
   }
   body .projectModule .listProject a img {
     width: 100%;
-    height: 100px;
+    height: 200px;
     object-fit: cover;
   }
   body .projectModule .listProject a h3 {

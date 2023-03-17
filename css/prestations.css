@@ -131,8 +131,11 @@ body header {
   justify-content: space-between;
   margin: 24px 60px 60px 60px;
 }
-body header div {
-  width: 40%;
+body header .menu {
+  display: none;
+}
+body header nav {
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -285,6 +288,122 @@ footer .logoFooter {
   width: 100px;
   height: auto;
   margin: 24px 0;
+}
+
+/*********************************************/
+/***************** RESPONSIVE ****************/
+/*********************************************/
+@media (max-width: 1280px) {
+  body::after {
+    width: 400px;
+    height: 400px;
+  }
+  body header nav {
+    width: 60%;
+  }
+  body .experienceType div {
+    width: 40%;
+  }
+  body .experienceType .description {
+    width: 55%;
+  }
+  body .Presta .listPrest div {
+    width: 42%;
+  }
+  body .Presta .listPrest div:last-of-type::before {
+    width: 400px;
+    height: 400px;
+    top: -20%;
+    left: -20%;
+  }
+}
+@media (max-width: 960px) {
+  body h2 {
+    font-size: 30px;
+  }
+  body hr {
+    margin-bottom: 24px;
+  }
+  body::after {
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+  body header .menu {
+    display: block;
+  }
+  body header nav {
+    display: none;
+  }
+  body .heroPresta h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  body .Presta .listPrest div {
+    width: 90%;
+  }
+  body .Presta .listPrest div:last-of-type {
+    width: 90%;
+  }
+  body .Presta .listPrest div:last-of-type::before {
+    width: 300px;
+    height: 300px;
+    top: -10%;
+    left: -10%;
+  }
+  body .projectModule {
+    margin-bottom: 2px;
+  }
+  body .projectModule .listProject {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .projectModule .listProject a {
+    width: 80%;
+    flex-direction: column-reverse;
+    padding: 16px;
+  }
+  body .projectModule .listProject a:first-of-type {
+    margin-bottom: 42px;
+  }
+  body .projectModule .listProject a::after {
+    right: 0;
+    bottom: -25px;
+    left: initial;
+  }
+  body .projectModule .listProject a img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  body .projectModule .listProject a h3 {
+    line-height: 32px;
+    margin: 16px 0 30px 0;
+  }
+  body footer {
+    flex-direction: column;
+    align-items: normal;
+    padding: 48px 0;
+  }
+  body footer ul {
+    align-items: normal;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 36px;
+  }
+  body footer ul li {
+    margin-bottom: 20px;
+  }
+  body footer div {
+    justify-content: normal;
+    margin-left: 30px;
+  }
+  body footer div a {
+    margin-right: 20px;
+  }
+  body footer .logoFooter {
+    margin: 60px 0 20px 30px;
+  }
 }
 
 /*# sourceMappingURL=prestations.css.map */
