@@ -152,8 +152,10 @@ body {
         justify-content: space-between;
         margin: 24px 0 60px 0;
 
-        .menu {
-            display: none;
+        button {
+            .hamburger-box {
+                display: none;
+            }
         }
 
         nav {
@@ -457,15 +459,11 @@ footer {
         }
 
         header {
-            .menu {
-                display: block;
-            }
 
-            .close {
-                z-index: 2;
-                width: 18px;
-                height: 18px;
-                background-size: contain;
+            button {
+                .hamburger-box {
+                    display: block;
+                }
             }
 
             nav {
