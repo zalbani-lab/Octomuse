@@ -312,13 +312,28 @@ body {
         margin: 42px 0 24px 0;
 
         a {
+            position: relative;
             border: solid 1px $secondary-color;
             border-radius: 10px;
             padding: 10px;
             display: flex;
             margin: auto 10px;
-            width: 400px;
-            position: relative;
+            width: 40%;
+            height: 150px;
+            justify-content: space-between;
+            box-sizing: border-box;
+
+            &:hover {
+
+                &::after {
+                    left: 62%;
+                }
+
+                img {
+                    opacity: 1;
+                    filter: grayscale(0);
+                }
+            }
 
             &::after {
                 content: '';
@@ -329,17 +344,22 @@ body {
                 height: 50px;
                 bottom: 30px;
                 left: 60%;
+                transition: left 0.5s;
                 transform: translateX(-50%);
             }
 
             h3 {
                 margin-left: 20px;
+                width: 40%;
             }
 
             img {
                 opacity: 40%;
                 border-radius: 10px;
                 width: 40%;
+                object-fit: cover;
+                transition: filter 1s;
+                filter: grayscale(1);
             }
         }
     }

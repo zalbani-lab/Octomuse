@@ -261,13 +261,23 @@ body header nav img {
   margin: 42px 0 24px 0;
 }
 .projectModule .listProject a {
+  position: relative;
   border: solid 1px #F4F0EE;
   border-radius: 10px;
   padding: 10px;
   display: flex;
   margin: auto 10px;
-  width: 400px;
-  position: relative;
+  width: 40%;
+  height: 150px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.projectModule .listProject a:hover::after {
+  left: 62%;
+}
+.projectModule .listProject a:hover img {
+  opacity: 1;
+  filter: grayscale(0);
 }
 .projectModule .listProject a::after {
   content: "";
@@ -278,15 +288,20 @@ body header nav img {
   height: 50px;
   bottom: 30px;
   left: 60%;
+  transition: left 0.5s;
   transform: translateX(-50%);
 }
 .projectModule .listProject a h3 {
   margin-left: 20px;
+  width: 40%;
 }
 .projectModule .listProject a img {
   opacity: 40%;
   border-radius: 10px;
   width: 40%;
+  object-fit: cover;
+  transition: filter 1s;
+  filter: grayscale(1);
 }
 .projectModule button {
   font-family: "Neusa-DemiBold";

@@ -281,6 +281,18 @@ body {
         display: flex;
         justify-content: space-between;
 
+        &:hover {
+
+            div::after {
+                right: -25%;
+            }
+
+            img {
+                opacity: 1;
+                filter: grayscale(0);
+            }
+        }
+
         div {
             color: $secondary-color;
             position: relative;
@@ -296,6 +308,7 @@ body {
                 height: 42px;
                 bottom: 30px;
                 right: -20%;
+                transition: right 0.5s;
             }
 
             span {
@@ -316,6 +329,7 @@ body {
             object-fit: cover;
             height: auto;
             filter: grayscale(1);
+            transition: filter 1s;
         }
     }
 }

@@ -240,6 +240,13 @@ body button {
   display: flex;
   justify-content: space-between;
 }
+.listProject .projetType:hover div::after {
+  right: -25%;
+}
+.listProject .projetType:hover img {
+  opacity: 1;
+  filter: grayscale(0);
+}
 .listProject .projetType div {
   color: #F4F0EE;
   position: relative;
@@ -255,6 +262,7 @@ body button {
   height: 42px;
   bottom: 30px;
   right: -20%;
+  transition: right 0.5s;
 }
 .listProject .projetType div span {
   font-family: "Neusa-DemiBold";
@@ -272,6 +280,7 @@ body button {
   object-fit: cover;
   height: auto;
   filter: grayscale(1);
+  transition: filter 1s;
 }
 
 .contactModule {
