@@ -168,6 +168,40 @@ body {
             align-items: center;
             justify-content: space-between;
 
+            a {
+                position: relative;
+
+                &:hover::after {
+                    position: absolute;
+                    content: "";
+                    background: url(../img/icone/stars_pink.png) no-repeat;
+                    width: 18px;
+                    height: 18px;
+                    background-size: cover;
+                    top: -5px;
+                    right: -10px;
+                    z-index: -1;
+                }
+            }
+
+            .btnPrimaire::after {
+                display: none;
+            }
+
+            .actif {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background: url(../img/icone/stars_pink.png) no-repeat;
+                    width: 18px;
+                    height: 18px;
+                    background-size: cover;
+                    top: -5px;
+                    right: -10px;
+                    z-index: -1;
+                }
+            }
+
             img {
                 display: none;
             }

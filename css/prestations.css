@@ -144,6 +144,34 @@ body header nav {
   align-items: center;
   justify-content: space-between;
 }
+body header nav a {
+  position: relative;
+}
+body header nav a:hover::after {
+  position: absolute;
+  content: "";
+  background: url(../img/icone/stars_pink.png) no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  top: -5px;
+  right: -10px;
+  z-index: -1;
+}
+body header nav .btnPrimaire::after {
+  display: none;
+}
+body header nav .actif::after {
+  position: absolute;
+  content: "";
+  background: url(../img/icone/stars_pink.png) no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  top: -5px;
+  right: -10px;
+  z-index: -1;
+}
 body header nav img {
   display: none;
 }

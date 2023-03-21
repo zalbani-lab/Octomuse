@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Neusa";
   src: url(../font/Neusa-Regular.otf);
@@ -91,6 +92,65 @@ ul {
 /*********************************************/
 /******************** HOME *******************/
 /*********************************************/
+/* Texte défilant */
+.messagedefilant {
+  position: relative;
+  display: block;
+  margin: 120px 0 0 0;
+  padding: 60px 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+.messagedefilant div {
+  position: absolute;
+  top: 40px;
+  min-width: 100%;
+}
+
+.messagedefilant div span,
+.messagedefilant div:after {
+  position: relative;
+  display: inline-block;
+  font-size: 1.875rem;
+  white-space: nowrap;
+  top: 0;
+}
+
+.messagedefilant div span {
+  animation: defilement 10s infinite linear;
+  font-family: "Neusa";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.messagedefilant div:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-text);
+  animation: defilement2 10s infinite linear;
+  font-family: "Neusa";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@keyframes defilement {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+@keyframes defilement2 {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
 body {
   position: relative;
   display: flex;
@@ -138,6 +198,34 @@ body header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+body header nav a {
+  position: relative;
+}
+body header nav a:hover::after {
+  position: absolute;
+  content: "";
+  background: url(../img/icone/stars_pink.png) no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  top: -5px;
+  right: -10px;
+  z-index: -1;
+}
+body header nav .btnPrimaire::after {
+  display: none;
+}
+body header nav .actif::after {
+  position: absolute;
+  content: "";
+  background: url(../img/icone/stars_pink.png) no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  top: -5px;
+  right: -10px;
+  z-index: -1;
 }
 body header nav img {
   display: none;
