@@ -104,15 +104,13 @@ ul {
 }
 
 /*********************************************/
-/******************** HOME *******************/
+/****************** ANIMATION ****************/
 /*********************************************/
-
-/* Texte défilant */
 
 .messagedefilant {
     position: relative;
     display: block;
-    margin: 120px 0 0 0;
+    margin: 80px 0 0 0;
     padding: 60px 0;
     width: 100%;
     height: 100px;
@@ -122,35 +120,37 @@ ul {
         position: absolute;
         top: 40px;
         min-width: 100%;
+
+        &:after {
+            position: relative;
+            display: inline-block;
+            font-size: pxToRem(30px);
+            white-space: nowrap;
+            top: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: attr(data-text);
+            animation: defilement2 10s infinite linear;
+            font-family: 'Neusa';
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        span {
+            animation: defilement 10s infinite linear;
+            font-family: 'Neusa';
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            font-size: pxToRem(30px);
+            white-space: nowrap;
+            top: 0;
+        }
     }
 }
 
-.messagedefilant div span,
-.messagedefilant div:after {
-    position: relative;
-    display: inline-block;
-    font-size: pxToRem(30px);
-    white-space: nowrap;
-    top: 0;
-}
-
-.messagedefilant div span {
-    animation: defilement 10s infinite linear;
-    font-family: 'Neusa';
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.messagedefilant div:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: attr(data-text);
-    animation: defilement2 10s infinite linear;
-    font-family: 'Neusa';
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
 @keyframes defilement {
     0% {
@@ -171,6 +171,10 @@ ul {
         margin-left: 0%;
     }
 }
+
+/*********************************************/
+/******************** HOME *******************/
+/*********************************************/
 
 body {
     position: relative;
