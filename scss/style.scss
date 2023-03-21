@@ -1,3 +1,4 @@
+@use 'variable' as *;
 @use 'sass:math';
 
 @function pxToRem($size) {
@@ -28,10 +29,6 @@
     font-family: 'Glook';
     src: url(../font/Gloock-Regular.ttf);
 }
-
-$primary-color : #083837;
-$secondary-color : #F4F0EE;
-$third-color : #ECD3D3;
 
 /*********************************************/
 /****************** GENERAL ******************/
@@ -99,6 +96,11 @@ ul {
     border: solid 1px $secondary-color;
     border-radius: 50px;
     padding: 8px 18px;
+
+    &:hover {
+        border-bottom-width: 3px;
+        border-right-width: 3px;
+    }
 }
 
 /*********************************************/

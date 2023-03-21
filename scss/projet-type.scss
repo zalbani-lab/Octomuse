@@ -99,6 +99,11 @@ ul {
     border: solid 1px $secondary-color;
     border-radius: 50px;
     padding: 8px 18px;
+
+    &:hover {
+        border-bottom-width: 3px;
+        border-right-width: 3px;
+    }
 }
 
 /*********************************************/
@@ -222,6 +227,8 @@ body {
 
     img {
         width: 45%;
+        border-radius: 10px;
+        object-fit: cover;
     }
 }
 
@@ -244,6 +251,8 @@ body {
 
     img {
         width: 100%;
+        border-radius: 10px;
+        margin-bottom: 18px;
     }
 
     .littlePicture {

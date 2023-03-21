@@ -83,6 +83,10 @@ ul {
   border-radius: 50px;
   padding: 8px 18px;
 }
+.btnPrimaireNega:hover {
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+}
 
 /*********************************************/
 /******************** HOME *******************/
@@ -155,6 +159,7 @@ body button {
   font-family: "Glook";
   font-size: 42px;
   line-height: 80px;
+  margin-bottom: 60px;
 }
 .heroPortfolio h1 {
   font-size: 5rem;
@@ -221,7 +226,7 @@ body button {
   width: 42px;
   height: 42px;
   bottom: 30px;
-  right: -80px;
+  right: -20%;
 }
 .listProject .projetType div span {
   font-family: "Neusa-DemiBold";
@@ -235,6 +240,10 @@ body button {
 .listProject .projetType img {
   border-radius: 12px;
   opacity: 40%;
+  width: 45%;
+  object-fit: cover;
+  height: auto;
+  filter: grayscale(1);
 }
 
 .contactModule {

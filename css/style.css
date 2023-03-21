@@ -83,6 +83,10 @@ ul {
   border-radius: 50px;
   padding: 8px 18px;
 }
+.btnPrimaireNega:hover {
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+}
 
 /*********************************************/
 /******************** HOME *******************/
