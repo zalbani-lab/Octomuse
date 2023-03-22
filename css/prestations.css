@@ -71,13 +71,15 @@ hr {
 .btnPrimaire {
   font-family: "Neusa-SemiBold";
   text-transform: uppercase;
+  background-color: #F4F0EE;
   border: solid 1px #083837;
   border-radius: 50px;
   padding: 8px 18px;
+  transition: transform 0.2s;
 }
 .btnPrimaire:hover {
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #083837;
 }
 
 .btnPrimaireNega {
@@ -87,10 +89,11 @@ hr {
   border: solid 1px #F4F0EE;
   border-radius: 50px;
   padding: 8px 18px;
+  transition: transform 0.2s;
 }
 .btnPrimaireNega:hover {
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #F4F0EE;
 }
 
 /*********************************************/
@@ -231,6 +234,13 @@ body button {
 .Presta .listPrest div:last-of-type p {
   margin-bottom: 42px;
 }
+.Presta .listPrest div:last-of-type a {
+  display: block;
+  width: 118px;
+}
+.Presta .listPrest div:last-of-type a p {
+  background-color: rgba(236, 211, 211, 0);
+}
 .Presta .listPrest div img {
   width: auto;
   height: 70px;
@@ -252,16 +262,26 @@ body button {
 .projectModule .listProject {
   display: flex;
   justify-content: center;
-  margin: 42px 0 24px 0;
+  margin: 42px 0 60px 0;
 }
 .projectModule .listProject a {
+  position: relative;
   border: solid 1px #F4F0EE;
   border-radius: 10px;
   padding: 10px;
   display: flex;
   margin: auto 10px;
-  width: 400px;
-  position: relative;
+  width: 40%;
+  height: 150px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.projectModule .listProject a:hover::after {
+  left: 62%;
+}
+.projectModule .listProject a:hover img {
+  opacity: 1;
+  filter: grayscale(0);
 }
 .projectModule .listProject a::after {
   content: "";
@@ -272,16 +292,21 @@ body button {
   height: 50px;
   bottom: 30px;
   left: 60%;
+  transition: left 0.5s;
   transform: translateX(-50%);
 }
 .projectModule .listProject a h3 {
   margin-left: 20px;
+  width: 40%;
   color: #F4F0EE;
 }
 .projectModule .listProject a img {
   opacity: 40%;
   border-radius: 10px;
   width: 40%;
+  object-fit: cover;
+  transition: filter 1s;
+  filter: grayscale(1);
 }
 .projectModule button {
   font-family: "Neusa-DemiBold";

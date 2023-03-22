@@ -87,13 +87,15 @@ hr {
 .btnPrimaire {
     font-family: 'Neusa-SemiBold';
     text-transform: uppercase;
+    background-color: $secondary-color;
     border: solid 1px $primary-color;
     border-radius: 50px;
     padding: 8px 18px;
+    transition: transform 0.2s;
 
     &:hover {
-        border-bottom-width: 3px;
-        border-right-width: 3px;
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px $primary-color;
     }
 }
 
@@ -104,10 +106,11 @@ hr {
     border: solid 1px $secondary-color;
     border-radius: 50px;
     padding: 8px 18px;
+    transition: transform 0.2s;
 
     &:hover {
-        border-bottom-width: 3px;
-        border-right-width: 3px;
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px $secondary-color;
     }
 }
 
@@ -268,6 +271,15 @@ body {
                 p {
                     margin-bottom: 42px;
                 }
+
+                a {
+                    display: block;
+                    width: 118px;
+
+                    p {
+                        background-color: #ecd3d300;
+                    }
+                }
             }
 
             img {
@@ -295,16 +307,31 @@ body {
     .listProject {
         display: flex;
         justify-content: center;
-        margin: 42px 0 24px 0;
+        margin: 42px 0 60px 0;
 
         a {
+            position: relative;
             border: solid 1px $secondary-color;
             border-radius: 10px;
             padding: 10px;
             display: flex;
             margin: auto 10px;
-            width: 400px;
-            position: relative;
+            width: 40%;
+            height: 150px;
+            justify-content: space-between;
+            box-sizing: border-box;
+
+            &:hover {
+
+                &::after {
+                    left: 62%;
+                }
+
+                img {
+                    opacity: 1;
+                    filter: grayscale(0);
+                }
+            }
 
             &::after {
                 content: '';
@@ -315,11 +342,13 @@ body {
                 height: 50px;
                 bottom: 30px;
                 left: 60%;
+                transition: left 0.5s;
                 transform: translateX(-50%);
             }
 
             h3 {
                 margin-left: 20px;
+                width: 40%;
                 color: $secondary-color;
             }
 
@@ -327,6 +356,9 @@ body {
                 opacity: 40%;
                 border-radius: 10px;
                 width: 40%;
+                object-fit: cover;
+                transition: filter 1s;
+                filter: grayscale(1);
             }
         }
     }
