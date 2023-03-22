@@ -82,13 +82,15 @@ ul {
 .btnPrimaire {
     font-family: 'Neusa-SemiBold';
     text-transform: uppercase;
+    background-color: $secondary-color;
     border: solid 1px $primary-color;
     border-radius: 50px;
     padding: 8px 18px;
+    transition: transform 0.2s;
 
     &:hover {
-        border-bottom-width: 3px;
-        border-right-width: 3px;
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px $primary-color;
     }
 }
 
@@ -99,10 +101,11 @@ ul {
     border: solid 1px $secondary-color;
     border-radius: 50px;
     padding: 8px 18px;
+    transition: transform 0.2s;
 
     &:hover {
-        border-bottom-width: 3px;
-        border-right-width: 3px;
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px $secondary-color;
     }
 }
 
@@ -360,38 +363,10 @@ body {
         p {
             margin-bottom: 42px;
         }
-    }
 
-    img {
-        width: 30%;
-    }
-}
-
-.contactModule {
-    width: 60%;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 120px 0;
-
-    &::after {
-        z-index: -2;
-        content: '';
-        position: absolute;
-        top: -20%;
-        right: 0;
-        border-radius: 800px;
-        background: radial-gradient(circle, $third-color 20%, #f4f0ee4f 60%);
-        width: 600px;
-        height: 600px;
-    }
-
-    div {
-        width: 55%;
-
-        p {
-            margin-bottom: 42px;
+        a {
+            display: block;
+            width: 80px;
         }
     }
 

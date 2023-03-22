@@ -66,13 +66,15 @@ ul {
 .btnPrimaire {
   font-family: "Neusa-SemiBold";
   text-transform: uppercase;
+  background-color: #F4F0EE;
   border: solid 1px #083837;
   border-radius: 50px;
   padding: 8px 18px;
+  transition: transform 0.2s;
 }
 .btnPrimaire:hover {
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #083837;
 }
 
 .btnPrimaireNega {
@@ -82,10 +84,11 @@ ul {
   border: solid 1px #F4F0EE;
   border-radius: 50px;
   padding: 8px 18px;
+  transition: transform 0.2s;
 }
 .btnPrimaireNega:hover {
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #F4F0EE;
 }
 
 /*********************************************/
@@ -308,34 +311,9 @@ body button {
 .contactModule div p {
   margin-bottom: 42px;
 }
-.contactModule img {
-  width: 30%;
-}
-
-.contactModule {
-  width: 60%;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 120px 0;
-}
-.contactModule::after {
-  z-index: -2;
-  content: "";
-  position: absolute;
-  top: -20%;
-  right: 0;
-  border-radius: 800px;
-  background: radial-gradient(circle, #ECD3D3 20%, rgba(244, 240, 238, 0.3098039216) 60%);
-  width: 600px;
-  height: 600px;
-}
-.contactModule div {
-  width: 55%;
-}
-.contactModule div p {
-  margin-bottom: 42px;
+.contactModule div a {
+  display: block;
+  width: 80px;
 }
 .contactModule img {
   width: 30%;
