@@ -34,28 +34,39 @@
 /****************** GENERAL ******************/
 /*********************************************/
 
-h2 {
-    font-family: 'Glook';
-    font-size: pxToRem(36px);
-}
+body {
+    main {
 
-h3 {
-    font-family: 'Glook';
-    font-size: pxToRem(24px);
-}
+        h1 {
+            font-family: 'Glook';
+            font-size: pxToRem(60px);
+            line-height: 70px;
+        }
 
-h4 {
-    font-family: 'Neusa-DemiBold';
-    font-size: pxToRem(20px);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+        h2 {
+            font-family: 'Glook';
+            font-size: pxToRem(36px);
+        }
 
-p {
-    font-family: 'Neusa';
-    font-size: pxToRem(16px);
-    line-height: 26px;
-    letter-spacing: 2px;
+        h3 {
+            font-family: 'Glook';
+            font-size: pxToRem(24px);
+        }
+
+        h4 {
+            font-family: 'Neusa-DemiBold';
+            font-size: pxToRem(20px);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-family: 'Neusa';
+            font-size: pxToRem(16px);
+            line-height: 26px;
+            letter-spacing: 2px;
+        }
+    }
 }
 
 a {
@@ -79,7 +90,7 @@ ul {
 .btnPrimaire {
     font-family: 'Neusa-SemiBold';
     text-transform: uppercase;
-    background-color: $secondary-color;
+    background-color: #f4f0ee00;
     border: solid 1px $primary-color;
     border-radius: 50px;
     padding: 8px 18px;
@@ -95,6 +106,7 @@ ul {
     font-family: 'Neusa-SemiBold';
     text-transform: uppercase;
     color: $secondary-color;
+    background-color: #f4f0ee00;
     border: solid 1px $secondary-color;
     border-radius: 50px;
     padding: 8px 18px;
@@ -114,7 +126,7 @@ ul {
     position: relative;
     display: block;
     margin: 80px 0 0 0;
-    padding: 60px 0;
+    padding: 10px 0;
     width: 100%;
     height: 100px;
     background-color: white;
@@ -188,7 +200,6 @@ body {
     background-color: $secondary-color;
     color: $primary-color;
     width: 100%;
-    height: 100vh;
 
     &::before {
         z-index: -1;
@@ -272,6 +283,12 @@ body {
             }
         }
     }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .hero {
@@ -285,9 +302,6 @@ body {
 
         h1 {
             position: relative;
-            font-family: 'Glook';
-            font-size: pxToRem(60px);
-            line-height: 70px;
 
             &::after {
                 z-index: -1;
@@ -409,6 +423,7 @@ body {
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
     .titlePrestaHome {
         position: relative;
@@ -445,6 +460,8 @@ body {
 
         div {
             display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
             border: 1px solid $third-color;
             border-radius: 10px;
             width: 100%;
@@ -452,6 +469,13 @@ body {
 
             &:last-of-type {
                 margin-bottom: 0;
+            }
+
+            h3 {
+                font-family: 'Neusa';
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: pxToRem(20px);
             }
 
             img {
@@ -586,20 +610,17 @@ footer {
 }
 
 @media (max-width: 960px) {
+
     body {
-
-        h2 {
-            font-size: pxToRem(30px);
-        }
-
-        hr {
-            margin-bottom: 24px;
-        }
 
         &::after {
             left: 0;
             width: 300px;
             height: 300px;
+        }
+
+        hr {
+            margin-bottom: 24px;
         }
 
         header {
@@ -658,125 +679,208 @@ footer {
             }
         }
 
-        .hero {
-            flex-direction: column;
-            width: 90%;
+        main {
+            display: flex;
 
-            div {
-                width: 100%;
-
-                h1 {
-                    font-size: pxToRem(48px);
-
-                    &::after {
-                        top: 50%;
-                        left: 65%;
-                    }
-                }
+            h1 {
+                font-family: 'Glook';
+                font-size: pxToRem(48px);
+                line-height: 48px;
             }
 
-            img {
-                display: none;
+            h2 {
+                font-family: 'Glook';
+                font-size: pxToRem(30px);
+                line-height: 36px;
             }
-        }
-
-        .project {
-            .projectListHome {
-                flex-direction: column;
-
-                a {
-                    width: 100%;
-                    height: auto;
-                    flex-direction: column-reverse;
-                    margin-bottom: 42px;
-
-                    &::after {
-                        bottom: -25px;
-                        left: 45px;
-                    }
-
-                    h3 {
-                        width: 80%;
-                    }
-
-                    img {
-                        width: 100%;
-                        height: 200px;
-                    }
-                }
-            }
-        }
-
-        .prestationsHome {
-            flex-direction: column;
-            box-sizing: border-box;
-            width: 90%;
-
-            .titlePrestaHome {
-                width: auto;
-                margin: 60px 0 0 60px;
-
-                h2 {
-                    margin-bottom: 42px;
-                }
-
-                .btnPrimaire {
-                    display: none;
-                }
-            }
-
-            .listPresta {
-                width: 100%;
-
-                .btnPrimaire {
-                    display: block;
-                    width: max-content;
-                    margin-top: 42px;
-                }
-            }
-        }
-
-        .particularyAsk {
-            flex-direction: column;
-            align-items: flex-start;
-            box-sizing: border-box;
-            width: 90%;
-            padding: 5%;
 
             h3 {
-                width: 100%;
-                margin: 0;
+                font-family: 'Glook';
+                font-size: pxToRem(18px);
+                line-height: 24px;
+            }
 
-                br {
-                    display: none;
-                }
+            h4 {
+                font-family: 'Neusa-DemiBold';
+                font-size: pxToRem(16px);
+                line-height: 32px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
             }
 
             p {
-                width: 100%;
-                margin-bottom: 24px;
-
-            }
-        }
-
-        .contactModule {
-            width: 90%;
-            flex-direction: column-reverse;
-
-            &::after {
-                width: 300px;
-                height: 300px;
-                top: -10%;
-                right: 0;
+                font-family: 'Neusa';
+                font-size: pxToRem(16px);
+                line-height: 26px;
+                letter-spacing: 2px;
             }
 
-            div {
-                width: 100%;
-                text-align: center;
+            .hero {
+                flex-direction: column;
+                width: 90%;
+
+                div {
+                    width: 100%;
+
+                    h1 {
+                        &::after {
+                            top: 50%;
+                            left: 65%;
+                        }
+                    }
+
+                    p {
+                        font-size: pxToRem(18px);
+                        line-height: 30px;
+                    }
+
+                    .btnPrimaire {
+                        font-size: pxToRem(16px);
+                    }
+                }
+
+                img {
+                    display: none;
+                }
             }
 
-            img {
-                width: 30%;
+            .messagedefilant {
+                margin-top: 60px;
+            }
+
+            .project {
+                h2 {
+                    text-align: center;
+                    margin-bottom: 42px;
+                }
+
+                .projectListHome {
+                    flex-direction: column;
+                    margin-bottom: 30px;
+
+                    a {
+                        width: 100%;
+                        height: auto;
+                        flex-direction: column-reverse;
+                        margin: 0 0 42px 0;
+
+                        &::after {
+                            bottom: -25px;
+                            left: 45px;
+                        }
+
+                        h3 {
+                            width: 100%;
+                            margin: 18px 0 30px 0;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 200px;
+                        }
+                    }
+                }
+
+                .btnPrimaireNega {
+                    margin: 0;
+                }
+            }
+
+            .prestationsHome {
+                flex-direction: column;
+                box-sizing: border-box;
+                width: 90%;
+
+                .titlePrestaHome {
+                    width: auto;
+                    margin: 0 0 20px 0;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    h2 {
+                        margin-bottom: 18px;
+                        text-align: center;
+                    }
+
+                    .btnPrimaire {
+                        display: none;
+                    }
+                }
+
+                .listPresta {
+                    width: 100%;
+
+
+                    a {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        .btnPrimaire {
+                            display: block;
+                            width: max-content;
+                            margin-top: 42px;
+                        }
+                    }
+                }
+            }
+
+            .particularyAsk {
+                flex-direction: column;
+                align-items: flex-start;
+                box-sizing: border-box;
+                width: 90%;
+                padding: 8% 5%;
+
+                h3 {
+                    width: 100%;
+                    margin: 0;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                p {
+                    width: 100%;
+                    margin-bottom: 24px;
+
+                }
+            }
+
+            .contactModule {
+                flex-direction: column-reverse;
+                width: 90%;
+                margin: 100px 0 60px 0;
+
+                &::after {
+                    width: 300px;
+                    height: 300px;
+                    top: -10%;
+                    right: 0;
+                }
+
+                div {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    h2 {
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                img {
+                    width: 40%;
+                }
             }
         }
 
@@ -810,4 +914,5 @@ footer {
             }
         }
     }
+
 }
