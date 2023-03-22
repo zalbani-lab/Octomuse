@@ -82,13 +82,15 @@ ul {
 .btnPrimaire {
     font-family: 'Neusa-SemiBold';
     text-transform: uppercase;
-    border: solid 1px $secondary-color;
+    background-color: $secondary-color;
+    border: solid 1px $primary-color;
     border-radius: 50px;
     padding: 8px 18px;
+    transition: transform 0.2s;
 
     &:hover {
-        border-bottom-width: 3px;
-        border-right-width: 3px;
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px $primary-color;
     }
 }
 
@@ -99,10 +101,11 @@ ul {
     border: solid 1px $secondary-color;
     border-radius: 50px;
     padding: 8px 18px;
+    transition: transform 0.2s;
 
     &:hover {
-        border-bottom-width: 3px;
-        border-right-width: 3px;
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px $secondary-color;
     }
 }
 
@@ -185,7 +188,7 @@ body {
                 }
             }
 
-            .btnPrimaire::after {
+            .btnPrimaireNega::after {
                 display: none;
             }
 
@@ -309,7 +312,7 @@ body {
     .listProject {
         display: flex;
         justify-content: center;
-        margin: 42px 0 24px 0;
+        margin: 42px 0 60px 0;
 
         a {
             position: relative;
@@ -364,17 +367,6 @@ body {
         }
     }
 
-    button {
-        font-family: 'Neusa-DemiBold';
-        font-size: pxToRem(16px);
-        letter-spacing: 2px;
-        text-decoration: underline;
-        border: none;
-        margin-top: 48px;
-        background-color: $primary-color;
-        color: $secondary-color;
-    }
-
 }
 
 .contactModule {
@@ -413,6 +405,8 @@ body {
             }
 
             a {
+                display: block;
+                width: 80px;
                 color: $primary-color;
                 border: solid 1px $primary-color;
             }

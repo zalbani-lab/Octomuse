@@ -66,13 +66,15 @@ ul {
 .btnPrimaire {
   font-family: "Neusa-SemiBold";
   text-transform: uppercase;
-  border: solid 1px #F4F0EE;
+  background-color: #F4F0EE;
+  border: solid 1px #083837;
   border-radius: 50px;
   padding: 8px 18px;
+  transition: transform 0.2s;
 }
 .btnPrimaire:hover {
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #083837;
 }
 
 .btnPrimaireNega {
@@ -82,10 +84,11 @@ ul {
   border: solid 1px #F4F0EE;
   border-radius: 50px;
   padding: 8px 18px;
+  transition: transform 0.2s;
 }
 .btnPrimaireNega:hover {
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #F4F0EE;
 }
 
 /*********************************************/
@@ -156,7 +159,7 @@ body header nav a:hover::after {
   right: -10px;
   z-index: -1;
 }
-body header nav .btnPrimaire::after {
+body header nav .btnPrimaireNega::after {
   display: none;
 }
 body header nav .actif::after {
@@ -258,7 +261,7 @@ body header nav img {
 .projectModule .listProject {
   display: flex;
   justify-content: center;
-  margin: 42px 0 24px 0;
+  margin: 42px 0 60px 0;
 }
 .projectModule .listProject a {
   position: relative;
@@ -303,16 +306,6 @@ body header nav img {
   transition: filter 1s;
   filter: grayscale(1);
 }
-.projectModule button {
-  font-family: "Neusa-DemiBold";
-  font-size: 1rem;
-  letter-spacing: 2px;
-  text-decoration: underline;
-  border: none;
-  margin-top: 48px;
-  background-color: #083837;
-  color: #F4F0EE;
-}
 
 .contactModule {
   width: 100%;
@@ -347,6 +340,8 @@ body header nav img {
   margin-bottom: 42px;
 }
 .contactModule .content div a {
+  display: block;
+  width: 80px;
   color: #083837;
   border: solid 1px #083837;
 }
