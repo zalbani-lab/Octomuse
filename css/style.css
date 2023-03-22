@@ -223,14 +223,17 @@ body header nav ul li a p:hover::after {
   right: -10px;
   z-index: -1;
 }
-body header nav ul li .btnPrimaire {
+body header nav ul li a:last-of-type {
   display: block;
   width: 100px;
 }
-body header nav ul li .btnPrimaire::after {
+body header nav ul li a:last-of-type p:hover::after {
   display: none;
 }
-body header nav .actif::after {
+body header nav ul li .actif {
+  position: relative;
+}
+body header nav ul li .actif::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -240,9 +243,6 @@ body header nav .actif::after {
   top: -5px;
   right: -10px;
   z-index: -1;
-}
-body header nav img {
-  display: none;
 }
 body main {
   display: flex;

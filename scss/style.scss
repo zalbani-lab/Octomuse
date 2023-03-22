@@ -265,35 +265,35 @@ body {
                                 z-index: -1;
                             }
                         }
+
+                        &:last-of-type {
+                            display: block;
+                            width: 100px;
+
+                            p {
+                                &:hover::after {
+                                    display: none;
+                                }
+                            }
+                        }
                     }
 
-                    .btnPrimaire {
-                        display: block;
-                        width: 100px;
+                    .actif {
+                        position: relative;
 
                         &::after {
-                            display: none;
+                            position: absolute;
+                            content: "";
+                            background: url(../img/icone/stars_pink.png) no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            background-size: cover;
+                            top: -5px;
+                            right: -10px;
+                            z-index: -1;
                         }
                     }
                 }
-            }
-
-            .actif {
-                &::after {
-                    position: absolute;
-                    content: "";
-                    background: url(../img/icone/stars_pink.png) no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    background-size: cover;
-                    top: -5px;
-                    right: -10px;
-                    z-index: -1;
-                }
-            }
-
-            img {
-                display: none;
             }
         }
     }
