@@ -66,13 +66,15 @@ ul {
 .btnPrimaire {
   font-family: "Neusa-SemiBold";
   text-transform: uppercase;
+  background-color: #F4F0EE;
   border: solid 1px #083837;
   border-radius: 50px;
   padding: 8px 18px;
+  transition: transform 0.2s;
 }
 .btnPrimaire:hover {
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #083837;
 }
 
 .btnPrimaireNega {
@@ -82,10 +84,11 @@ ul {
   border: solid 1px #F4F0EE;
   border-radius: 50px;
   padding: 8px 18px;
+  transition: transform 0.2s;
 }
 .btnPrimaireNega:hover {
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #F4F0EE;
 }
 
 /*********************************************/
@@ -267,6 +270,14 @@ body header nav img {
 .hero div p span {
   font-family: "Neusa-Medium";
 }
+.hero div a {
+  display: block;
+  width: 226px;
+}
+.hero div a p {
+  font-size: 1rem;
+  line-height: 26px;
+}
 
 .project {
   background-color: #083837;
@@ -360,6 +371,13 @@ body header nav img {
 .prestationsHome .titlePrestaHome h2 {
   margin-bottom: 60px;
 }
+.prestationsHome .titlePrestaHome a {
+  width: 160px;
+  display: block;
+}
+.prestationsHome .titlePrestaHome a p {
+  background-color: white;
+}
 .prestationsHome .listPresta {
   width: 45%;
 }
@@ -420,6 +438,10 @@ body header nav img {
 }
 .contactModule div p {
   margin-bottom: 42px;
+}
+.contactModule div a {
+  display: block;
+  width: 118px;
 }
 .contactModule img {
   width: 30%;
