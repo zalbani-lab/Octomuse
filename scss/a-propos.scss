@@ -564,7 +564,7 @@ footer {
                         margin-top: 42px;
                     }
 
-                    .btnPrimaire {
+                    .btnPrimaireNega {
                         width: 100%;
                         padding: 18px 24px;
                         box-sizing: border-box;
@@ -636,9 +636,11 @@ footer {
             .listProject {
                 flex-direction: column;
                 align-items: center;
+                width: 80%;
 
                 a {
-                    width: 80%;
+                    width: 100%;
+                    height: 100%;
                     flex-direction: column-reverse;
                     padding: 16px;
 
@@ -647,9 +649,8 @@ footer {
                     }
 
                     &::after {
-                        right: 0;
                         bottom: -25px;
-                        left: initial;
+                        left: 40px;
                     }
 
                     img {
@@ -659,6 +660,7 @@ footer {
                     }
 
                     h3 {
+                        width: 100%;
                         line-height: 32px;
                         margin: 16px 0 30px 0;
                     }

@@ -688,11 +688,11 @@ footer {
                     width: 100%;
                     height: auto;
                     flex-direction: column-reverse;
-                    margin-bottom: 18px;
+                    margin-bottom: 42px;
 
                     &::after {
-                        right: 0;
-                        left: auto;
+                        bottom: -25px;
+                        left: 45px;
                     }
 
                     h3 {

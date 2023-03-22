@@ -574,11 +574,11 @@ footer .logoFooter {
     width: 100%;
     height: auto;
     flex-direction: column-reverse;
-    margin-bottom: 18px;
+    margin-bottom: 42px;
   }
   body .project .projectListHome a::after {
-    right: 0;
-    left: auto;
+    bottom: -25px;
+    left: 45px;
   }
   body .project .projectListHome a h3 {
     width: 80%;

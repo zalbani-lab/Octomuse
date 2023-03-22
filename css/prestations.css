@@ -262,7 +262,7 @@ body button {
 .projectModule .listProject {
   display: flex;
   justify-content: center;
-  margin: 42px 0 60px 0;
+  margin: 42px 0 24px 0;
 }
 .projectModule .listProject a {
   position: relative;
@@ -449,14 +449,17 @@ footer .logoFooter {
     left: -10%;
   }
   body .projectModule {
-    margin-bottom: 2px;
+    margin: 0 0 2px 0;
   }
   body .projectModule .listProject {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 60px;
+    width: 80%;
   }
   body .projectModule .listProject a {
-    width: 80%;
+    width: 100%;
+    height: 100%;
     flex-direction: column-reverse;
     padding: 16px;
   }
@@ -464,9 +467,8 @@ footer .logoFooter {
     margin-bottom: 42px;
   }
   body .projectModule .listProject a::after {
-    right: 0;
     bottom: -25px;
-    left: initial;
+    left: 40px;
   }
   body .projectModule .listProject a img {
     width: 100%;
@@ -474,6 +476,7 @@ footer .logoFooter {
     object-fit: cover;
   }
   body .projectModule .listProject a h3 {
+    width: 100%;
     line-height: 32px;
     margin: 16px 0 30px 0;
   }
