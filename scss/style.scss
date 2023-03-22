@@ -41,6 +41,7 @@ body {
             font-family: 'Glook';
             font-size: pxToRem(60px);
             line-height: 70px;
+            margin-bottom: 18px;
         }
 
         h2 {
@@ -134,7 +135,7 @@ ul {
 
     div {
         position: absolute;
-        top: 40px;
+        top: 30px;
         min-width: 100%;
 
         &:after {
@@ -240,28 +241,41 @@ body {
 
         nav {
             width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
 
-            a {
-                position: relative;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
 
-                &:hover::after {
-                    position: absolute;
-                    content: "";
-                    background: url(../img/icone/stars_pink.png) no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    background-size: cover;
-                    top: -5px;
-                    right: -10px;
-                    z-index: -1;
+                li {
+                    a {
+                        p {
+                            width: max-content;
+                            position: relative;
+
+                            &:hover::after {
+                                position: absolute;
+                                content: "";
+                                background: url(../img/icone/stars_pink.png) no-repeat;
+                                width: 18px;
+                                height: 18px;
+                                background-size: cover;
+                                top: -5px;
+                                right: -10px;
+                                z-index: -1;
+                            }
+                        }
+                    }
+
+                    .btnPrimaire {
+                        display: block;
+                        width: 100px;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
                 }
-            }
-
-            .btnPrimaire::after {
-                display: none;
             }
 
             .actif {
@@ -307,8 +321,8 @@ body {
                 z-index: -1;
                 content: '';
                 position: absolute;
-                top: 30%;
-                left: 60%;
+                top: 40%;
+                left: 70%;
                 background-image: url('../img/image/stars_white.svg');
                 background-repeat: no-repeat;
                 width: 60px;
@@ -336,6 +350,11 @@ body {
                 line-height: 26px;
             }
         }
+    }
+
+    img {
+        width: 35%;
+        height: auto;
     }
 }
 
@@ -370,7 +389,6 @@ body {
             height: 150px;
             position: relative;
             justify-content: space-between;
-            box-sizing: border-box;
 
             &:hover {
 
@@ -428,7 +446,7 @@ body {
     .titlePrestaHome {
         position: relative;
         width: 40%;
-        margin: 60px 0 0 100px;
+        margin: 60px 0 0 60px;
 
         &::before {
             position: absolute;
@@ -437,7 +455,7 @@ body {
             background-size: cover;
             width: 180px;
             height: 159.08px;
-            top: -42px;
+            top: -60px;
             left: -60px;
         }
 
@@ -462,10 +480,12 @@ body {
             display: flex;
             flex-direction: row-reverse;
             justify-content: flex-end;
+            align-items: center;
             border: 1px solid $third-color;
             border-radius: 10px;
             width: 100%;
             margin-bottom: 12px;
+            padding: 6px 0;
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -498,7 +518,7 @@ body {
     background-color: $primary-color;
     color: $secondary-color;
     width: 70%;
-    padding: 1% 5%;
+    padding: 2% 5%;
     border-radius: 10px;
 
     p {
@@ -541,6 +561,7 @@ body {
 
     img {
         width: 30%;
+        height: auto;
     }
 }
 
@@ -647,32 +668,36 @@ footer {
                     left: 0;
                     top: 0;
                     padding: 42px;
-                    box-sizing: border-box;
 
-                    a {
-                        color: $secondary-color;
-                        background-color: #f4f0ee1f;
+                    ul {
+                        flex-direction: column;
+                        align-items: flex-start;
                         width: 100%;
-                        padding: 18px 24px;
-                        box-sizing: border-box;
-                        border-radius: 10px;
 
-                        &:first-of-type {
-                            margin-top: 60px;
+                        li {
+                            width: 100%;
+
+                            a {
+                                display: block;
+                                color: $secondary-color;
+                                background-color: #f4f0ee1f;
+                                width: 100%;
+                                padding: 18px 24px;
+                                border-radius: 10px;
+
+                                &:first-of-type {
+                                    margin-top: 20px;
+                                }
+                            }
+
+                            .btnPrimaire {
+                                width: 100%;
+                                padding: 18px 24px;
+                                border-radius: 10px;
+                                border: none;
+                            }
                         }
-                    }
 
-                    img {
-                        display: block;
-                        margin-top: 42px;
-                    }
-
-                    .btnPrimaire {
-                        width: 100%;
-                        padding: 18px 24px;
-                        box-sizing: border-box;
-                        border-radius: 10px;
-                        border: none;
                     }
                 }
 
@@ -788,7 +813,6 @@ footer {
 
             .prestationsHome {
                 flex-direction: column;
-                box-sizing: border-box;
                 width: 90%;
 
                 .titlePrestaHome {
@@ -802,6 +826,10 @@ footer {
                     h2 {
                         margin-bottom: 18px;
                         text-align: center;
+
+                        br {
+                            display: none;
+                        }
                     }
 
                     .btnPrimaire {
@@ -830,7 +858,6 @@ footer {
             .particularyAsk {
                 flex-direction: column;
                 align-items: flex-start;
-                box-sizing: border-box;
                 width: 90%;
                 padding: 8% 5%;
 

@@ -25,6 +25,7 @@ body main h1 {
   font-family: "Glook";
   font-size: 3.75rem;
   line-height: 70px;
+  margin-bottom: 18px;
 }
 body main h2 {
   font-family: "Glook";
@@ -109,7 +110,7 @@ ul {
 }
 .messagedefilant div {
   position: absolute;
-  top: 40px;
+  top: 30px;
   min-width: 100%;
 }
 .messagedefilant div:after {
@@ -201,14 +202,17 @@ body header button .hamburger-box {
 }
 body header nav {
   width: 50%;
+}
+body header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body header nav a {
+body header nav ul li a p {
+  width: max-content;
   position: relative;
 }
-body header nav a:hover::after {
+body header nav ul li a p:hover::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -219,7 +223,11 @@ body header nav a:hover::after {
   right: -10px;
   z-index: -1;
 }
-body header nav .btnPrimaire::after {
+body header nav ul li .btnPrimaire {
+  display: block;
+  width: 100px;
+}
+body header nav ul li .btnPrimaire::after {
   display: none;
 }
 body header nav .actif::after {
@@ -258,8 +266,8 @@ body main {
   z-index: -1;
   content: "";
   position: absolute;
-  top: 30%;
-  left: 60%;
+  top: 40%;
+  left: 70%;
   background-image: url("../img/image/stars_white.svg");
   background-repeat: no-repeat;
   width: 60px;
@@ -281,6 +289,10 @@ body main {
 .hero div a p {
   font-size: 1rem;
   line-height: 26px;
+}
+.hero img {
+  width: 35%;
+  height: auto;
 }
 
 .project {
@@ -313,7 +325,6 @@ body main {
   height: 150px;
   position: relative;
   justify-content: space-between;
-  box-sizing: border-box;
 }
 .project .projectListHome a:hover::after {
   left: 62%;
@@ -361,7 +372,7 @@ body main {
 .prestationsHome .titlePrestaHome {
   position: relative;
   width: 40%;
-  margin: 60px 0 0 100px;
+  margin: 60px 0 0 60px;
 }
 .prestationsHome .titlePrestaHome::before {
   position: absolute;
@@ -370,7 +381,7 @@ body main {
   background-size: cover;
   width: 180px;
   height: 159.08px;
-  top: -42px;
+  top: -60px;
   left: -60px;
 }
 .prestationsHome .titlePrestaHome h2 {
@@ -390,10 +401,12 @@ body main {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
+  align-items: center;
   border: 1px solid #ECD3D3;
   border-radius: 10px;
   width: 100%;
   margin-bottom: 12px;
+  padding: 6px 0;
 }
 .prestationsHome .listPresta div:last-of-type {
   margin-bottom: 0;
@@ -420,7 +433,7 @@ body main {
   background-color: #083837;
   color: #F4F0EE;
   width: 70%;
-  padding: 1% 5%;
+  padding: 2% 5%;
   border-radius: 10px;
 }
 .particularyAsk p {
@@ -458,6 +471,7 @@ body main {
 }
 .contactModule img {
   width: 30%;
+  height: auto;
 }
 
 footer {
@@ -536,27 +550,29 @@ footer .logoFooter {
     left: 0;
     top: 0;
     padding: 42px;
-    box-sizing: border-box;
   }
-  body header nav.active a {
+  body header nav.active ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  body header nav.active ul li {
+    width: 100%;
+  }
+  body header nav.active ul li a {
+    display: block;
     color: #F4F0EE;
     background-color: rgba(244, 240, 238, 0.1215686275);
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
   }
-  body header nav.active a:first-of-type {
-    margin-top: 60px;
+  body header nav.active ul li a:first-of-type {
+    margin-top: 20px;
   }
-  body header nav.active img {
-    display: block;
-    margin-top: 42px;
-  }
-  body header nav.active .btnPrimaire {
+  body header nav.active ul li .btnPrimaire {
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
     border: none;
   }
@@ -646,7 +662,6 @@ footer .logoFooter {
   }
   body main .prestationsHome {
     flex-direction: column;
-    box-sizing: border-box;
     width: 90%;
   }
   body main .prestationsHome .titlePrestaHome {
@@ -659,6 +674,9 @@ footer .logoFooter {
   body main .prestationsHome .titlePrestaHome h2 {
     margin-bottom: 18px;
     text-align: center;
+  }
+  body main .prestationsHome .titlePrestaHome h2 br {
+    display: none;
   }
   body main .prestationsHome .titlePrestaHome .btnPrimaire {
     display: none;
@@ -679,7 +697,6 @@ footer .logoFooter {
   body main .particularyAsk {
     flex-direction: column;
     align-items: flex-start;
-    box-sizing: border-box;
     width: 90%;
     padding: 8% 5%;
   }
