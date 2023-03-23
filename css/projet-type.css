@@ -196,7 +196,6 @@ body header nav ul li .actif::after {
   width: 100%;
   border-top: 1px solid #F4F0EE;
   border-bottom: 1px solid #F4F0EE;
-  padding: 18px 0;
 }
 .heroProjectType .descriptionProject table tbody {
   display: flex;
@@ -217,11 +216,13 @@ body header nav ul li .actif::after {
   letter-spacing: 2px;
   align-items: flex-end;
 }
-.heroProjectType .descriptionProject table tbody tr td {
-  margin-bottom: 18px;
-}
+.heroProjectType .descriptionProject table tbody tr td,
 .heroProjectType .descriptionProject table tbody tr th {
-  margin-bottom: 18px;
+  margin: 12px 0 6px 0;
+}
+.heroProjectType .descriptionProject table tbody tr td:last-of-type,
+.heroProjectType .descriptionProject table tbody tr th:last-of-type {
+  margin-bottom: 12px;
 }
 .heroProjectType img {
   width: 45%;

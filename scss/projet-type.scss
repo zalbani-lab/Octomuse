@@ -243,7 +243,6 @@ body {
             width: 100%;
             border-top: 1px solid $secondary-color;
             border-bottom: 1px solid $secondary-color;
-            padding: 18px 0;
 
             tbody {
                 display: flex;
@@ -266,12 +265,14 @@ body {
                         align-items: flex-end;
                     }
 
-                    td {
-                        margin-bottom: 18px;
+                    td,
+                    th {
+                        margin: 12px 0 6px 0;
                     }
 
-                    th {
-                        margin-bottom: 18px;
+                    td:last-of-type,
+                    th:last-of-type {
+                        margin-bottom: 12px;
                     }
                 }
             }
