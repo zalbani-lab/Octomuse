@@ -21,6 +21,25 @@
 /*********************************************/
 /****************** GENERAL ******************/
 /*********************************************/
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #083837;
+  color: #F4F0EE;
+  width: 100%;
+  height: 100vh;
+}
+body::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background-image: url("../img/image/courbe.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
 body main {
   display: flex;
   flex-direction: column;
@@ -102,30 +121,6 @@ ul {
 /*********************************************/
 /******************** HOME *******************/
 /*********************************************/
-body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #083837;
-  color: #F4F0EE;
-  width: 100%;
-  height: 100vh;
-}
-body::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  background-image: url("../img/image/courbe.svg");
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-}
-body h1 {
-  font-family: "Glook";
-  font-size: 3.75rem;
-  line-height: 70px;
-}
 body header {
   font-family: "Neusa-SemiBold";
   text-transform: uppercase;
@@ -146,11 +141,11 @@ body header nav ul {
   align-items: center;
   justify-content: space-between;
 }
-body header nav ul li a p {
+body header nav ul li a {
   width: max-content;
   position: relative;
 }
-body header nav ul li a p:hover::after {
+body header nav ul li a:hover::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -165,7 +160,7 @@ body header nav ul li .btnPrimaireNega {
   display: block;
   width: 100px;
 }
-body header nav ul li .btnPrimaireNega p:hover::after {
+body header nav ul li .btnPrimaireNega:hover::after {
   display: none;
 }
 body header nav ul li .actif {

@@ -38,6 +38,37 @@ $third-color : #ECD3D3;
 /*********************************************/
 
 body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    color: $primary-color;
+    width: 100%;
+    height: 100vh;
+
+    &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        background-image: url('../img/image/courbe.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::after {
+        z-index: -2;
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 20%;
+        border-radius: 800px;
+        background: radial-gradient(circle, $third-color 20%, #f4f0ee4f 60%);
+        width: 800px;
+        height: 800px;
+    }
+
     main {
 
         h1 {
@@ -131,36 +162,6 @@ hr {
 /*********************************************/
 
 body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $secondary-color;
-    color: $primary-color;
-    width: 100%;
-    height: 100vh;
-
-    &::before {
-        z-index: -1;
-        content: '';
-        position: absolute;
-        background-image: url('../img/image/courbe.svg');
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-    }
-
-    &::after {
-        z-index: -2;
-        content: '';
-        position: absolute;
-        top: 5%;
-        left: 20%;
-        border-radius: 800px;
-        background: radial-gradient(circle, $third-color 20%, #f4f0ee4f 60%);
-        width: 800px;
-        height: 800px;
-    }
 
     header {
         font-family: 'Neusa-SemiBold';
@@ -187,21 +188,19 @@ body {
 
                 li {
                     a {
-                        p {
-                            width: max-content;
-                            position: relative;
+                        width: max-content;
+                        position: relative;
 
-                            &:hover::after {
-                                position: absolute;
-                                content: "";
-                                background: url(../img/icone/stars_pink.png) no-repeat;
-                                width: 18px;
-                                height: 18px;
-                                background-size: cover;
-                                top: -5px;
-                                right: -10px;
-                                z-index: -1;
-                            }
+                        &:hover::after {
+                            position: absolute;
+                            content: "";
+                            background: url(../img/icone/stars_pink.png) no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            background-size: cover;
+                            top: -5px;
+                            right: -10px;
+                            z-index: -1;
                         }
                     }
 
@@ -209,10 +208,8 @@ body {
                         display: block;
                         width: 100px;
 
-                        p {
-                            &:hover::after {
-                                display: none;
-                            }
+                        &:hover::after {
+                            display: none;
                         }
                     }
 

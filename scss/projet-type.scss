@@ -38,6 +38,25 @@ $third-color : #ECD3D3;
 /*********************************************/
 
 body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary-color;
+    color: $secondary-color;
+    width: 100%;
+    height: 100vh;
+
+    &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        background-image: url('../img/image/courbe.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
     main {
         display: flex;
         flex-direction: column;
@@ -129,30 +148,6 @@ ul {
 /*********************************************/
 
 body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $primary-color;
-    color: $secondary-color;
-    width: 100%;
-    height: 100vh;
-
-    &::before {
-        z-index: -1;
-        content: '';
-        position: absolute;
-        background-image: url('../img/image/courbe.svg');
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-    }
-
-    h1 {
-        font-family: 'Glook';
-        font-size: pxToRem(60px);
-        line-height: 70px;
-    }
 
     header {
         font-family: 'Neusa-SemiBold';
@@ -179,21 +174,19 @@ body {
 
                 li {
                     a {
-                        p {
-                            width: max-content;
-                            position: relative;
+                        width: max-content;
+                        position: relative;
 
-                            &:hover::after {
-                                position: absolute;
-                                content: "";
-                                background: url(../img/icone/stars_pink.png) no-repeat;
-                                width: 18px;
-                                height: 18px;
-                                background-size: cover;
-                                top: -5px;
-                                right: -10px;
-                                z-index: -1;
-                            }
+                        &:hover::after {
+                            position: absolute;
+                            content: "";
+                            background: url(../img/icone/stars_pink.png) no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            background-size: cover;
+                            top: -5px;
+                            right: -10px;
+                            z-index: -1;
                         }
                     }
 
@@ -201,10 +194,8 @@ body {
                         display: block;
                         width: 100px;
 
-                        p {
-                            &:hover::after {
-                                display: none;
-                            }
+                        &:hover::after {
+                            display: none;
                         }
                     }
 
