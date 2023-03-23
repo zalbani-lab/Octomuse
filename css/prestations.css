@@ -21,24 +21,27 @@
 /*********************************************/
 /****************** GENERAL ******************/
 /*********************************************/
-h2 {
+body main h1 {
+  font-family: "Glook";
+  font-size: 3.75rem;
+  line-height: 70px;
+  margin-bottom: 18px;
+}
+body main h2 {
   font-family: "Glook";
   font-size: 2.25rem;
 }
-
-h3 {
+body main h3 {
   font-family: "Glook";
   font-size: 1.5rem;
 }
-
-h4 {
+body main h4 {
   font-family: "Neusa-DemiBold";
   font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-p {
+body main p {
   font-family: "Neusa";
   font-size: 1rem;
   line-height: 26px;
@@ -143,14 +146,17 @@ body header button .hamburger-box {
 }
 body header nav {
   width: 50%;
+}
+body header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body header nav a {
+body header nav ul li a p {
+  width: max-content;
   position: relative;
 }
-body header nav a:hover::after {
+body header nav ul li a p:hover::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -161,10 +167,17 @@ body header nav a:hover::after {
   right: -10px;
   z-index: -1;
 }
-body header nav .btnPrimaire::after {
+body header nav ul li .btnPrimaire {
+  display: block;
+  width: 100px;
+}
+body header nav ul li .btnPrimaire p:hover::after {
   display: none;
 }
-body header nav .actif::after {
+body header nav ul li .actif {
+  position: relative;
+}
+body header nav ul li .actif::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -175,8 +188,10 @@ body header nav .actif::after {
   right: -10px;
   z-index: -1;
 }
-body header nav img {
-  display: none;
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 body button {
   font-family: "Neusa-DemiBold";
@@ -191,8 +206,7 @@ body button {
   width: 80%;
 }
 .heroPresta h1 {
-  font-size: 5rem;
-  line-height: 70px;
+  margin-bottom: 42px;
 }
 
 .Presta {
@@ -203,19 +217,19 @@ body button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 42px;
 }
 .Presta .listPrest div {
-  width: 45%;
+  width: 48%;
   background-color: white;
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 12px;
 }
 .Presta .listPrest div:last-of-type {
-  width: 40%;
   background-color: rgba(255, 255, 255, 0);
   position: relative;
+  padding-right: 50px;
 }
 .Presta .listPrest div:last-of-type::before {
   z-index: -2;
@@ -240,6 +254,9 @@ body button {
 }
 .Presta .listPrest div:last-of-type a p {
   background-color: rgba(236, 211, 211, 0);
+}
+.Presta .listPrest div h3 {
+  margin: 12px 0;
 }
 .Presta .listPrest div img {
   width: auto;
@@ -310,7 +327,6 @@ body button {
 }
 .projectModule button {
   font-family: "Neusa-DemiBold";
-  font-size: 1rem;
   letter-spacing: 2px;
   text-decoration: underline;
   border: none;
@@ -335,7 +351,6 @@ footer ul {
 footer ul a {
   color: #F4F0EE;
   font-family: "Neusa-DemiBold";
-  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -367,9 +382,6 @@ footer .logoFooter {
   body .experienceType .description {
     width: 55%;
   }
-  body .Presta .listPrest div {
-    width: 42%;
-  }
   body .Presta .listPrest div:last-of-type::before {
     width: 400px;
     height: 400px;
@@ -378,9 +390,6 @@ footer .logoFooter {
   }
 }
 @media (max-width: 960px) {
-  body h2 {
-    font-size: 1.875rem;
-  }
   body hr {
     margin-bottom: 24px;
   }
@@ -408,74 +417,107 @@ footer .logoFooter {
     left: 0;
     top: 0;
     padding: 42px;
-    box-sizing: border-box;
   }
-  body header nav.active a {
+  body header nav.active ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  body header nav.active ul li {
+    width: 100%;
+  }
+  body header nav.active ul li a {
+    display: block;
     color: #F4F0EE;
     background-color: rgba(244, 240, 238, 0.1215686275);
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
   }
-  body header nav.active a:first-of-type {
-    margin-top: 60px;
+  body header nav.active ul li a:first-of-type {
+    margin-top: 20px;
   }
-  body header nav.active img {
-    display: block;
-    margin-top: 42px;
-  }
-  body header nav.active .btnPrimaire {
+  body header nav.active ul li .btnPrimaire {
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
     border: none;
   }
-  body .heroPresta h1 {
+  body main {
+    display: flex;
+  }
+  body main h1 {
+    font-family: "Glook";
     font-size: 3rem;
-    line-height: 58px;
+    line-height: 48px;
   }
-  body .Presta .listPrest div {
-    width: 90%;
+  body main h2 {
+    font-family: "Glook";
+    font-size: 1.875rem;
+    line-height: 36px;
   }
-  body .Presta .listPrest div:last-of-type {
-    width: 90%;
+  body main h3 {
+    font-family: "Glook";
+    font-size: 1.125rem;
+    line-height: 24px;
   }
-  body .Presta .listPrest div:last-of-type::before {
+  body main h4 {
+    font-family: "Neusa-DemiBold";
+    font-size: 1rem;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  body main p {
+    font-family: "Neusa";
+    font-size: 1rem;
+    line-height: 26px;
+    letter-spacing: 2px;
+  }
+  body main .Presta .listPrest div {
+    width: 100%;
+  }
+  body main .Presta .listPrest div:last-of-type {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  body main .Presta .listPrest div:last-of-type::before {
     width: 300px;
     height: 300px;
     top: -10%;
     left: -10%;
   }
-  body .projectModule {
+  body main .projectModule {
     margin: 0 0 2px 0;
   }
-  body .projectModule .listProject {
+  body main .projectModule h2 {
+    width: 90%;
+  }
+  body main .projectModule .listProject {
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
-    width: 80%;
+    width: 90%;
   }
-  body .projectModule .listProject a {
+  body main .projectModule .listProject a {
     width: 100%;
     height: 100%;
     flex-direction: column-reverse;
     padding: 16px;
   }
-  body .projectModule .listProject a:first-of-type {
+  body main .projectModule .listProject a:first-of-type {
     margin-bottom: 42px;
   }
-  body .projectModule .listProject a::after {
+  body main .projectModule .listProject a::after {
     bottom: -25px;
     left: 40px;
   }
-  body .projectModule .listProject a img {
+  body main .projectModule .listProject a img {
     width: 100%;
     height: 200px;
     object-fit: cover;
   }
-  body .projectModule .listProject a h3 {
+  body main .projectModule .listProject a h3 {
     width: 100%;
     line-height: 32px;
     margin: 16px 0 30px 0;
