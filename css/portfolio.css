@@ -296,7 +296,7 @@ body button {
   object-fit: cover;
   height: auto;
   filter: grayscale(1);
-  transition: filter 1s;
+  transition: opacity 1s;
 }
 
 .contactModule {
