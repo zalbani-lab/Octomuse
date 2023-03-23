@@ -883,6 +883,7 @@ footer {
                 margin: 100px 0 60px 0;
 
                 &::after {
+                    z-index: -2;
                     width: 300px;
                     height: 300px;
                     top: -10%;
@@ -890,6 +891,7 @@ footer {
                 }
 
                 div {
+                    z-index: 1;
                     width: 100%;
                     display: flex;
                     flex-direction: column;

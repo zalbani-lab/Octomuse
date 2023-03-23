@@ -37,28 +37,43 @@ $third-color : #ECD3D3;
 /****************** GENERAL ******************/
 /*********************************************/
 
-h2 {
-    font-family: 'Glook';
-    font-size: pxToRem(36px);
-}
+body {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-h3 {
-    font-family: 'Glook';
-    font-size: pxToRem(24px);
-}
+        h1 {
+            font-family: 'Glook';
+            font-size: pxToRem(60px);
+            line-height: 70px;
+            margin-bottom: 18px;
+        }
 
-h4 {
-    font-family: 'Neusa-DemiBold';
-    font-size: pxToRem(20px);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+        h2 {
+            font-family: 'Glook';
+            font-size: pxToRem(36px);
+        }
 
-p {
-    font-family: 'Neusa';
-    font-size: pxToRem(16px);
-    line-height: 26px;
-    letter-spacing: 2px;
+        h3 {
+            font-family: 'Glook';
+            font-size: pxToRem(24px);
+        }
+
+        h4 {
+            font-family: 'Neusa-DemiBold';
+            font-size: pxToRem(20px);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-family: 'Neusa';
+            font-size: pxToRem(16px);
+            line-height: 26px;
+            letter-spacing: 2px;
+        }
+    }
 }
 
 a {
@@ -152,62 +167,63 @@ body {
             .hamburger-box {
                 display: none;
             }
-
-            .hamburger-inner {
-                background-color: $secondary-color;
-
-                &::after {
-                    background-color: $secondary-color;
-                }
-
-                &::before {
-                    background-color: $secondary-color;
-                }
-            }
         }
 
         nav {
             width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
 
-            a {
-                position: relative;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
 
-                &:hover::after {
-                    position: absolute;
-                    content: "";
-                    background: url(../img/icone/stars_pink.png) no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    background-size: cover;
-                    top: -5px;
-                    right: -10px;
-                    z-index: -1;
+                li {
+                    a {
+                        p {
+                            width: max-content;
+                            position: relative;
+
+                            &:hover::after {
+                                position: absolute;
+                                content: "";
+                                background: url(../img/icone/stars_pink.png) no-repeat;
+                                width: 18px;
+                                height: 18px;
+                                background-size: cover;
+                                top: -5px;
+                                right: -10px;
+                                z-index: -1;
+                            }
+                        }
+                    }
+
+                    .btnPrimaireNega {
+                        display: block;
+                        width: 100px;
+
+                        p {
+                            &:hover::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .actif {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            background: url(../img/icone/stars_pink.png) no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            background-size: cover;
+                            top: -5px;
+                            right: -10px;
+                            z-index: -1;
+                        }
+                    }
                 }
-            }
-
-            .btnPrimaireNega::after {
-                display: none;
-            }
-
-            .actif {
-                &::after {
-                    position: absolute;
-                    content: "";
-                    background: url(../img/icone/stars_pink.png) no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    background-size: cover;
-                    top: -5px;
-                    right: -10px;
-                    z-index: -1;
-                }
-            }
-
-            img {
-                display: none;
             }
         }
     }
@@ -446,7 +462,7 @@ body {
 
             a {
                 display: block;
-                width: 80px;
+                width: 115px;
                 color: $primary-color;
                 border: solid 1px $primary-color;
             }
@@ -538,6 +554,12 @@ footer {
             button {
                 .hamburger-box {
                     display: block;
+
+                    .hamburger-inner,
+                    .hamburger-inner::after,
+                    .hamburger-inner::before {
+                        background-color: $secondary-color;
+                    }
                 }
             }
 
@@ -557,32 +579,36 @@ footer {
                     left: 0;
                     top: 0;
                     padding: 42px;
-                    box-sizing: border-box;
 
-                    a {
-                        color: $secondary-color;
-                        background-color: #f4f0ee1f;
+                    ul {
+                        flex-direction: column;
+                        align-items: flex-start;
                         width: 100%;
-                        padding: 18px 24px;
-                        box-sizing: border-box;
-                        border-radius: 10px;
 
-                        &:first-of-type {
-                            margin-top: 60px;
+                        li {
+                            width: 100%;
+
+                            a {
+                                display: block;
+                                color: $secondary-color;
+                                background-color: #f4f0ee1f;
+                                width: 100%;
+                                padding: 18px 24px;
+                                border-radius: 10px;
+
+                                &:first-of-type {
+                                    margin-top: 20px;
+                                }
+                            }
+
+                            .btnPrimaire {
+                                width: 100%;
+                                padding: 18px 24px;
+                                border-radius: 10px;
+                                border: none;
+                            }
                         }
-                    }
 
-                    img {
-                        display: block;
-                        margin-top: 42px;
-                    }
-
-                    .btnPrimaire {
-                        width: 100%;
-                        padding: 18px 24px;
-                        box-sizing: border-box;
-                        border-radius: 10px;
-                        border: none;
                     }
                 }
 

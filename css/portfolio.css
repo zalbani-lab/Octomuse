@@ -414,27 +414,29 @@ footer .logoFooter {
     left: 0;
     top: 0;
     padding: 42px;
-    box-sizing: border-box;
   }
-  body header nav.active a {
+  body header nav.active ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  body header nav.active ul li {
+    width: 100%;
+  }
+  body header nav.active ul li a {
+    display: block;
     color: #F4F0EE;
     background-color: rgba(244, 240, 238, 0.1215686275);
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
   }
-  body header nav.active a:first-of-type {
-    margin-top: 60px;
+  body header nav.active ul li a:first-of-type {
+    margin-top: 20px;
   }
-  body header nav.active img {
-    display: block;
-    margin-top: 42px;
-  }
-  body header nav.active .btnPrimaire {
+  body header nav.active ul li .btnPrimaire {
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
     border: none;
   }

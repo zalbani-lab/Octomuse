@@ -3,30 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/projet-type.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/projet-type.css"/>
     <link rel="stylesheet" href="css/hamburger.css">
     <script src="javascript/menu.js"></script>
     <title>Octomuse</title>
   </head>
   <body>
     <header>
-      <img src="img/image/logo-nega.svg" alt="logo Octomuse">
+      <img src="img/image/logo-nega.svg" alt="Octomuse">
       <button id="menuButton" class="hamburger hamburger--spring" onclick="changeClass()" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
       <nav id="openMenu">
-        <a href="index.html">accueil</a>
-        <a class="actif" href="portfolio.html">portfolio</a>
-        <a href="prestations.html">prestations</a>
-        <a href="a-propos.html">à propos</a>
-        <a class="btnPrimaireNega" href="">contact</a>
-        <img src="img/image/logo-nega.svg" alt="logo Octomuse">
+        <ul>
+          <li>
+            <a href="index.html"><p>accueil</p></a>
+          </li>
+          <li>
+            <a class="actif" href="portfolio.html"><p>portfolio</p></a>    
+          </li>
+          <li>
+            <a href="prestations.html"><p>prestations</p></a>
+          </li>
+          <li>
+            <a href="a-propos.html"><p>à propos</p></a>
+          </li>
+          <li>
+            <a class="btnPrimaireNega" href=""><p>contact</p></a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <div class="heroProjectType">
+    <main>
+      <div class="heroProjectType">
         <div class="descriptionProject">
             <h1>Application Randodo</h1>
             <p>Vous êtes un fan de randonnées et vous souhaitez partir en pleine nature pendant plusieurs jours ? L’application Randodo vous permet de trouver facilement vos lieux de bivouacs, que ça soit en auberge ou au milieu des bois, et vous génère une carte GPX pour vous guider tout au long de votre randonnée. <br><br>
@@ -46,18 +58,18 @@
             </table>
         </div>
         <img src="img/image/project/randodo/randodo_1.png" alt="">
-    </div>
-    <div class="explicationProject">
+      </div>
+      <div class="explicationProject">
         <h2>Conception<br> et réalisation</h2>
         <p>Pour ce projet, plusieurs phases de recherche ont dû être mises en place. On y comprend : un brainstorming, un dot voting, des sprints questions, un diagramme, des personas, un "How might We..?", une phase de recherche et de veille pour la création d'identité, plusieurs crasy 8 pour vivifier la conception, des wireframes, un user flow et enfin, un prototype complet et fonctionnel.
         </p>
-    </div>
-    <div class="pictureProject">
+      </div>
+      <div class="pictureProject">
         <img class="littlePicture" src="img/image/project/randodo/randodo_2.jpg" alt="">
         <img class="littlePicture" src="img/image/project/randodo/randodo_3.jpg" alt="">
         <img src="img/image/project/randodo/Storyboard.jpg" alt="">
-    </div>
-    <div class="projectModule">
+      </div>
+      <div class="projectModule">
         <h2>Retrouvez d’autres projets</h2>
         <div class="listProject">
           <a href="mapraa.html">
@@ -70,17 +82,18 @@
           </a>
         </div>
         <a href="portfolio.html" class="btnPrimaireNega">Voir + de projets</a>
-    </div>
-    <div class="contactModule">
+      </div>
+      <div class="contactModule">
         <div class="content">
             <div>
                 <h2>Vous souhaitez collaborer avec Octomuse ?</h2>
                 <p>Nous serions ravis de pouvoir échanger avec vous autour d’un petit café ! </p>
                 <a class="btnPrimaire" href="">Contacter</a>
               </div>
-              <img src="img/image/contact_illustration.svg" alt="">
+              <img src="img/image/contact_illustration.png" alt="">
             </div>
         </div>
+      </main>
       <footer>
         <ul>
           <li><a href="portfolio.html">portfolio</a></li>

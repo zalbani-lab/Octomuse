@@ -21,24 +21,32 @@
 /*********************************************/
 /****************** GENERAL ******************/
 /*********************************************/
-h2 {
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main h1 {
+  font-family: "Glook";
+  font-size: 3.75rem;
+  line-height: 70px;
+  margin-bottom: 18px;
+}
+body main h2 {
   font-family: "Glook";
   font-size: 2.25rem;
 }
-
-h3 {
+body main h3 {
   font-family: "Glook";
   font-size: 1.5rem;
 }
-
-h4 {
+body main h4 {
   font-family: "Neusa-DemiBold";
   font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-p {
+body main p {
   font-family: "Neusa";
   font-size: 1rem;
   line-height: 26px;
@@ -130,25 +138,19 @@ body header {
 body header button .hamburger-box {
   display: none;
 }
-body header button .hamburger-inner {
-  background-color: #F4F0EE;
-}
-body header button .hamburger-inner::after {
-  background-color: #F4F0EE;
-}
-body header button .hamburger-inner::before {
-  background-color: #F4F0EE;
-}
 body header nav {
   width: 50%;
+}
+body header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body header nav a {
+body header nav ul li a p {
+  width: max-content;
   position: relative;
 }
-body header nav a:hover::after {
+body header nav ul li a p:hover::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -159,10 +161,17 @@ body header nav a:hover::after {
   right: -10px;
   z-index: -1;
 }
-body header nav .btnPrimaireNega::after {
+body header nav ul li .btnPrimaireNega {
+  display: block;
+  width: 100px;
+}
+body header nav ul li .btnPrimaireNega p:hover::after {
   display: none;
 }
-body header nav .actif::after {
+body header nav ul li .actif {
+  position: relative;
+}
+body header nav ul li .actif::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -172,9 +181,6 @@ body header nav .actif::after {
   top: -5px;
   right: -10px;
   z-index: -1;
-}
-body header nav img {
-  display: none;
 }
 
 .heroProjectType {
@@ -373,7 +379,7 @@ body header nav img {
 }
 .contactModule .content div a {
   display: block;
-  width: 80px;
+  width: 115px;
   color: #083837;
   border: solid 1px #083837;
 }
@@ -440,6 +446,11 @@ footer .logoFooter {
   body header button .hamburger-box {
     display: block;
   }
+  body header button .hamburger-box .hamburger-inner,
+  body header button .hamburger-box .hamburger-inner::after,
+  body header button .hamburger-box .hamburger-inner::before {
+    background-color: #F4F0EE;
+  }
   body header nav {
     display: none;
   }
@@ -456,27 +467,29 @@ footer .logoFooter {
     left: 0;
     top: 0;
     padding: 42px;
-    box-sizing: border-box;
   }
-  body header nav.active a {
+  body header nav.active ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  body header nav.active ul li {
+    width: 100%;
+  }
+  body header nav.active ul li a {
+    display: block;
     color: #F4F0EE;
     background-color: rgba(244, 240, 238, 0.1215686275);
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
   }
-  body header nav.active a:first-of-type {
-    margin-top: 60px;
+  body header nav.active ul li a:first-of-type {
+    margin-top: 20px;
   }
-  body header nav.active img {
-    display: block;
-    margin-top: 42px;
-  }
-  body header nav.active .btnPrimaire {
+  body header nav.active ul li .btnPrimaire {
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
     border: none;
   }
