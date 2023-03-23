@@ -4,82 +4,88 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/portfolio.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/hamburger.css">
     <script src="javascript/menu.js"></script>
     <title>Octomuse</title>
   </head>
   <body>
     <header>
-      <img src="img/image/logo.svg" alt="logo Octomuse">
+      <img src="img/image/logo.svg" alt="Octomuse">
       <button id="menuButton" class="hamburger hamburger--spring" onclick="changeClass()" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
       <nav id="openMenu">
-        <a href="index.html">accueil</a>
-        <a class="actif" href="portfolio.html">portfolio</a>
-        <a href="prestations.html">prestations</a>
-        <a href="a-propos.html">à propos</a>
-        <a class="btnPrimaire" href="">contact</a>
-        <img src="img/image/logo-nega.svg" alt="logo Octomuse">
+        <ul>
+          <li>
+            <a class="actif" href="index.html"><p>accueil</p></a>
+          </li>
+          <li>
+            <a href="portfolio.html"><p>portfolio</p></a>    
+          </li>
+          <li>
+            <a href="prestations.html"><p>prestations</p></a>
+          </li>
+          <li>
+            <a href="a-propos.html"><p>à propos</p></a>
+          </li>
+          <li>
+            <a class="btnPrimaire" href=""><p>contact</p></a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <div class="heroPortfolio">
+    <main>
+
+      <div class="heroPortfolio">
         <h1>Découvrez <br>tous les projets</h1>
         <p>Nous nous efforçons d’offrir le meilleur à nos clients, que ce soit sur nos échanges que sur la prestation de nos services.</p>
-    </div>
-    <!--<ul class="filters">
-        <li class="actif"><button>Tous</button></li>
-        <li><button>Branding</button></li>
-        <li><button>Print</button></li>
-        <li><button>Webdesign</button></li>
-        <li><button>Illustration</button></li>
-    </ul>-->
-    <div class="listProject">
+      </div>
+      <div class="listProject">
         <a class="projetType" href="champi.html">
             <div>
-                <span>Illustration</span>
-                <h3>La vallée des champignons</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
+              <span>Illustration</span>
+              <h3>La vallée des champignons</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
             </div>
-            <img src="img/image/project/champignons/projet-champignon-1.svg" alt="">
+            <img src="img/image/project/champignons/projet-champignon-1.jpg" alt="">
         </a>
         <a class="projetType" href="randodo.html">
-            <div>
-                <span>Webdesign</span>
-                <h3>Application Randodo</h3>
-                <p> Randodo vous permet de trouver facilement vos lieux de bivouacs, que ça soit en auberge ou au milieu des bois, et vous génère une carte GPX </p>
-            </div>
-            <img src="img/image/project/randodo/randodo_2.jpg" alt="">
+          <div>
+              <span>Webdesign</span>
+              <h3>Application Randodo</h3>
+              <p> Randodo vous permet de trouver facilement vos lieux de bivouacs, que ça soit en auberge ou au milieu des bois, et vous génère une carte GPX </p>
+          </div>
+          <img src="img/image/project/randodo/randodo_2.jpg" alt="">
         </a>
         <a class="projetType" href="mapraa.html">
           <div>
-              <span>Branding</span>
-              <h3>Création d'identité de la MAPRAA</h3>
-              <p> Randodo vous permet de trouver facilement vos lieux de bivouacs, que ça soit en auberge ou au milieu des bois, et vous génère une carte GPX </p>
+            <span>Branding</span>
+            <h3>Création d'identité de la MAPRAA</h3>
+            <p> Randodo vous permet de trouver facilement vos lieux de bivouacs, que ça soit en auberge ou au milieu des bois, et vous génère une carte GPX </p>
           </div>
           <img src="img/image/project/mapraa/mapraa_1.jpg" alt="">
         </a>
         <a class="projetType" href="v&b.html">
           <div>
-              <span>Webdesign</span>
-              <h3>Application V&B</h3>
-              <p> Randodo vous permet de trouver facilement vos lieux de bivouacs, que ça soit en auberge ou au milieu des bois, et vous génère une carte GPX </p>
+            <span>Webdesign</span>
+            <h3>Application V&B</h3>
+            <p> Randodo vous permet de trouver facilement vos lieux de bivouacs, que ça soit en auberge ou au milieu des bois, et vous génère une carte GPX </p>
           </div>
           <img src="img/image/project/v&b/V&B_1.png" alt="">
-      </a>
-    </div>
-    <!--<button>Voir + de projets</button>-->
-    <div class="contactModule">
+        </a>
+      </div>
+      <div class="contactModule">
         <div>
           <h2>Vous souhaitez collaborer avec Octomuse ?</h2>
           <p>Nous serions ravis de pouvoir échanger avec vous autour d’un petit café ! </p>
-          <a class="btnPrimaire" href="">Contacter</a>
+          <a href=""><p class="btnPrimaire">Contacter</p></a>
         </div>
-        <img src="img/image/contact_illustration.svg" alt="">
+        <img src="img/image/contact_illustration.png" alt="">
       </div>
+    </main>
       <footer>
         <ul>
           <li><a href="portfolio.html">portfolio</a></li>

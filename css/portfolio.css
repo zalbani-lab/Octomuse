@@ -21,24 +21,28 @@
 /*********************************************/
 /****************** GENERAL ******************/
 /*********************************************/
-h2 {
+body main h1 {
+  font-family: "Glook";
+  font-size: 3.75rem;
+  line-height: 70px;
+  margin-bottom: 18px;
+}
+body main h2 {
   font-family: "Glook";
   font-size: 2.25rem;
 }
-
-h3 {
+body main h3 {
   font-family: "Glook";
   font-size: 1.5rem;
+  margin: 12px 0;
 }
-
-h4 {
+body main h4 {
   font-family: "Neusa-DemiBold";
   font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-p {
+body main p {
   font-family: "Neusa";
   font-size: 1rem;
   line-height: 26px;
@@ -103,6 +107,7 @@ body {
   color: #083837;
   width: 100%;
   height: 100vh;
+  margin: 0;
 }
 body::before {
   z-index: -1;
@@ -138,14 +143,17 @@ body header button .hamburger-box {
 }
 body header nav {
   width: 50%;
+}
+body header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body header nav a {
+body header nav ul li a p {
+  width: max-content;
   position: relative;
 }
-body header nav a:hover::after {
+body header nav ul li a p:hover::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -156,10 +164,20 @@ body header nav a:hover::after {
   right: -10px;
   z-index: -1;
 }
-body header nav .btnPrimaire::after {
+body header nav ul li .btnPrimaire {
+  display: block;
+  width: 100px;
+}
+body header nav ul li .btnPrimaire p {
+  margin: 0;
+}
+body header nav ul li .btnPrimaire p:hover::after {
   display: none;
 }
-body header nav .actif::after {
+body header nav ul li .actif {
+  position: relative;
+}
+body header nav ul li .actif::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -170,12 +188,13 @@ body header nav .actif::after {
   right: -10px;
   z-index: -1;
 }
-body header nav img {
-  display: none;
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 body button {
   font-family: "Neusa-DemiBold";
-  font-size: 1rem;
   letter-spacing: 2px;
   text-decoration: underline;
   text-transform: uppercase;
@@ -188,16 +207,12 @@ body button {
   display: flex;
   justify-content: space-between;
   font-family: "Glook";
-  font-size: 42px;
   line-height: 80px;
   margin-bottom: 60px;
 }
-.heroPortfolio h1 {
-  font-size: 5rem;
-}
 .heroPortfolio p {
   width: 30%;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 .filters {
@@ -217,7 +232,6 @@ body button {
 }
 .filters li button {
   font-family: "Neusa";
-  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: rgba(8, 56, 55, 0.1607843137);
@@ -234,7 +248,7 @@ body button {
   justify-content: space-between;
 }
 .listProject .projetType {
-  width: 45%;
+  width: 48%;
   background-color: #083837;
   color: #F4F0EE;
   padding: 24px;
@@ -270,7 +284,6 @@ body button {
 .listProject .projetType div span {
   font-family: "Neusa-DemiBold";
   text-transform: uppercase;
-  font-size: 0.75rem;
   letter-spacing: 2px;
   background-color: rgba(244, 240, 238, 0.168627451);
   padding: 4px 8px;
@@ -313,7 +326,7 @@ body button {
 }
 .contactModule div a {
   display: block;
-  width: 80px;
+  width: 118px;
 }
 .contactModule img {
   width: 30%;
@@ -335,7 +348,6 @@ footer ul {
 footer ul a {
   color: #F4F0EE;
   font-family: "Neusa-DemiBold";
-  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -358,7 +370,7 @@ footer .logoFooter {
     width: 60%;
   }
   body .experienceType div {
-    width: 40%;
+    width: 48%;
   }
   body .experienceType .description {
     width: 55%;
@@ -370,17 +382,11 @@ footer .logoFooter {
   body .listProject {
     width: 90%;
   }
-  body .listProject .projetType {
-    width: 43%;
-  }
   body .contactModule {
     width: 80%;
   }
 }
 @media (max-width: 960px) {
-  body h2 {
-    font-size: 1.875rem;
-  }
   body hr {
     margin-bottom: 24px;
   }
@@ -432,68 +438,110 @@ footer .logoFooter {
     border-radius: 10px;
     border: none;
   }
-  body .heroPortfolio {
+  body main {
+    display: flex;
+  }
+  body main h1 {
+    font-family: "Glook";
+    font-size: 3rem;
+    line-height: 48px;
+  }
+  body main h2 {
+    font-family: "Glook";
+    font-size: 1.875rem;
+    line-height: 36px;
+  }
+  body main h3 {
+    font-family: "Glook";
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+  body main h4 {
+    font-family: "Neusa-DemiBold";
+    font-size: 1rem;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  body main p {
+    font-family: "Neusa";
+    font-size: 1rem;
+    line-height: 26px;
+    letter-spacing: 2px;
+  }
+  body main .heroPortfolio {
     flex-direction: column;
     width: 90%;
+    margin-bottom: 30px;
   }
-  body .heroPortfolio h1 {
-    font-size: 3rem;
+  body main .heroPortfolio h1 {
     line-height: 58px;
     margin-bottom: 0;
   }
-  body .heroPortfolio p {
+  body main .heroPortfolio p {
     width: 100%;
     margin: 18px 0 0 0;
   }
-  body .filters {
+  body main .filters {
     flex-wrap: wrap;
     justify-content: center;
     width: 90%;
   }
-  body .filters li button {
+  body main .filters li button {
     margin-top: 12px;
   }
-  body .listProject {
+  body main .listProject {
     flex-direction: column;
   }
-  body .listProject .projetType {
+  body main .listProject .projetType {
     width: 100%;
     box-sizing: border-box;
     flex-direction: column-reverse;
     margin: 0 0 30px 0;
   }
-  body .listProject .projetType div {
+  body main .listProject .projetType div {
     width: 100%;
-    margin: 30px 0 36px 0;
+    margin: 30px 0 60px 0;
   }
-  body .listProject .projetType div::after {
+  body main .listProject .projetType div::after {
     left: 0;
-    bottom: -20%;
+    bottom: -50%;
   }
-  body .listProject .projetType img {
+  body main .listProject .projetType img {
     width: 100%;
     height: 200px;
     object-fit: cover;
   }
-  body button {
+  body main button {
     margin-top: 24px;
   }
-  body .contactModule {
-    width: 90%;
+  body main .contactModule {
     flex-direction: column-reverse;
+    width: 90%;
+    margin: 60px 0;
   }
-  body .contactModule::after {
+  body main .contactModule::after {
     width: 300px;
     height: 300px;
     top: -10%;
     right: 0;
   }
-  body .contactModule div {
+  body main .contactModule div {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  body .contactModule img {
-    width: 30%;
+  body main .contactModule div h2 {
+    margin-bottom: 0;
+  }
+  body main .contactModule div p {
+    margin-bottom: 30px;
+  }
+  body main .contactModule img {
+    width: 40%;
+    margin-bottom: 24px;
   }
   body footer {
     flex-direction: column;

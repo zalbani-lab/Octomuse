@@ -37,28 +37,41 @@ $third-color : #ECD3D3;
 /****************** GENERAL ******************/
 /*********************************************/
 
-h2 {
-    font-family: 'Glook';
-    font-size: pxToRem(36px);
-}
+body {
+    main {
 
-h3 {
-    font-family: 'Glook';
-    font-size: pxToRem(24px);
-}
+        h1 {
+            font-family: 'Glook';
+            font-size: pxToRem(60px);
+            line-height: 70px;
+            margin-bottom: 18px;
+        }
 
-h4 {
-    font-family: 'Neusa-DemiBold';
-    font-size: pxToRem(20px);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+        h2 {
+            font-family: 'Glook';
+            font-size: pxToRem(36px);
+        }
 
-p {
-    font-family: 'Neusa';
-    font-size: pxToRem(16px);
-    line-height: 26px;
-    letter-spacing: 2px;
+        h3 {
+            font-family: 'Glook';
+            font-size: pxToRem(24px);
+            margin: 12px 0;
+        }
+
+        h4 {
+            font-family: 'Neusa-DemiBold';
+            font-size: pxToRem(20px);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-family: 'Neusa';
+            font-size: pxToRem(16px);
+            line-height: 26px;
+            letter-spacing: 2px;
+        }
+    }
 }
 
 a {
@@ -122,6 +135,7 @@ body {
     color: $primary-color;
     width: 100%;
     height: 100vh;
+    margin: 0;
 
     &::before {
         z-index: -1;
@@ -162,53 +176,73 @@ body {
 
         nav {
             width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
 
-            a {
-                position: relative;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
 
-                &:hover::after {
-                    position: absolute;
-                    content: "";
-                    background: url(../img/icone/stars_pink.png) no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    background-size: cover;
-                    top: -5px;
-                    right: -10px;
-                    z-index: -1;
+                li {
+                    a {
+                        p {
+                            width: max-content;
+                            position: relative;
+
+                            &:hover::after {
+                                position: absolute;
+                                content: "";
+                                background: url(../img/icone/stars_pink.png) no-repeat;
+                                width: 18px;
+                                height: 18px;
+                                background-size: cover;
+                                top: -5px;
+                                right: -10px;
+                                z-index: -1;
+                            }
+                        }
+                    }
+
+                    .btnPrimaire {
+                        display: block;
+                        width: 100px;
+
+                        p {
+                            margin: 0;
+
+                            &:hover::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .actif {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            background: url(../img/icone/stars_pink.png) no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            background-size: cover;
+                            top: -5px;
+                            right: -10px;
+                            z-index: -1;
+                        }
+                    }
                 }
-            }
-
-            .btnPrimaire::after {
-                display: none;
-            }
-
-            .actif {
-                &::after {
-                    position: absolute;
-                    content: "";
-                    background: url(../img/icone/stars_pink.png) no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    background-size: cover;
-                    top: -5px;
-                    right: -10px;
-                    z-index: -1;
-                }
-            }
-
-            img {
-                display: none;
             }
         }
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     button {
         font-family: 'Neusa-DemiBold';
-        font-size: pxToRem(16px);
         letter-spacing: 2px;
         text-decoration: underline;
         text-transform: uppercase;
@@ -222,17 +256,12 @@ body {
     display: flex;
     justify-content: space-between;
     font-family: 'Glook';
-    font-size: 42px;
     line-height: 80px;
     margin-bottom: 60px;
 
-    h1 {
-        font-size: pxToRem(80px);
-    }
-
     p {
         width: 30%;
-        margin-top: 200px;
+        margin-top: 150px;
     }
 }
 
@@ -256,7 +285,6 @@ body {
 
         button {
             font-family: 'Neusa';
-            font-size: pxToRem(16px);
             text-transform: uppercase;
             letter-spacing: 2px;
             background-color: #08383729;
@@ -275,7 +303,7 @@ body {
     justify-content: space-between;
 
     .projetType {
-        width: 45%;
+        width: 48%;
         background-color: $primary-color;
         color: $secondary-color;
         padding: 24px;
@@ -317,7 +345,6 @@ body {
             span {
                 font-family: 'Neusa-DemiBold';
                 text-transform: uppercase;
-                font-size: pxToRem(12px);
                 letter-spacing: 2px;
                 background-color: #f4f0ee2b;
                 padding: 4px 8px;
@@ -366,7 +393,7 @@ body {
 
         a {
             display: block;
-            width: 80px;
+            width: 118px;
         }
     }
 
@@ -392,7 +419,6 @@ footer {
         a {
             color: $secondary-color;
             font-family: 'Neusa-DemiBold';
-            font-size: pxToRem(16px);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -425,7 +451,7 @@ footer {
 
         .experienceType {
             div {
-                width: 40%;
+                width: 48%;
             }
 
             .description {
@@ -440,10 +466,6 @@ footer {
 
         .listProject {
             width: 90%;
-
-            .projetType {
-                width: 43%;
-            }
         }
 
         .contactModule {
@@ -454,10 +476,6 @@ footer {
 
 @media (max-width: 960px) {
     body {
-
-        h2 {
-            font-size: pxToRem(30px);
-        }
 
         hr {
             margin-bottom: 24px;
@@ -525,84 +543,134 @@ footer {
             }
         }
 
-        .heroPortfolio {
-            flex-direction: column;
-            width: 90%;
+        main {
+            display: flex;
 
             h1 {
+                font-family: 'Glook';
                 font-size: pxToRem(48px);
-                line-height: 58px;
-                margin-bottom: 0;
+                line-height: 48px;
+            }
+
+            h2 {
+                font-family: 'Glook';
+                font-size: pxToRem(30px);
+                line-height: 36px;
+            }
+
+            h3 {
+                font-family: 'Glook';
+                font-size: pxToRem(18px);
+                line-height: 24px;
+            }
+
+            h4 {
+                font-family: 'Neusa-DemiBold';
+                font-size: pxToRem(16px);
+                line-height: 32px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
             }
 
             p {
-                width: 100%;
-                margin: 18px 0 0 0;
+                font-family: 'Neusa';
+                font-size: pxToRem(16px);
+                line-height: 26px;
+                letter-spacing: 2px;
             }
-        }
 
-        .filters {
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 90%;
+            .heroPortfolio {
+                flex-direction: column;
+                width: 90%;
+                margin-bottom: 30px;
 
-            li {
+                h1 {
+                    line-height: 58px;
+                    margin-bottom: 0;
+                }
 
-                button {
-                    margin-top: 12px;
+                p {
+                    width: 100%;
+                    margin: 18px 0 0 0;
                 }
             }
-        }
 
-        .listProject {
-            flex-direction: column;
+            .filters {
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 90%;
 
-            .projetType {
-                width: 100%;
-                box-sizing: border-box;
+                li {
+
+                    button {
+                        margin-top: 12px;
+                    }
+                }
+            }
+
+            .listProject {
+                flex-direction: column;
+
+                .projetType {
+                    width: 100%;
+                    box-sizing: border-box;
+                    flex-direction: column-reverse;
+                    margin: 0 0 30px 0;
+
+                    div {
+                        width: 100%;
+                        margin: 30px 0 60px 0;
+
+                        &::after {
+                            left: 0;
+                            bottom: -50%;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            button {
+                margin-top: 24px;
+            }
+
+            .contactModule {
                 flex-direction: column-reverse;
-                margin: 0 0 30px 0;
+                width: 90%;
+                margin: 60px 0;
+
+                &::after {
+                    width: 300px;
+                    height: 300px;
+                    top: -10%;
+                    right: 0;
+                }
 
                 div {
                     width: 100%;
-                    margin: 30px 0 36px 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
 
-                    &::after {
-                        left: 0;
-                        bottom: -20%;
+                    h2 {
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        margin-bottom: 30px;
                     }
                 }
 
                 img {
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
+                    width: 40%;
+                    margin-bottom: 24px;
                 }
-            }
-        }
-
-        button {
-            margin-top: 24px;
-        }
-
-        .contactModule {
-            width: 90%;
-            flex-direction: column-reverse;
-
-            &::after {
-                width: 300px;
-                height: 300px;
-                top: -10%;
-                right: 0;
-            }
-
-            div {
-                width: 100%;
-                text-align: center;
-            }
-
-            img {
-                width: 30%;
             }
         }
 

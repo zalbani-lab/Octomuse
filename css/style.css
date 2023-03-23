@@ -354,7 +354,7 @@ body main {
   border-radius: 10px;
   width: 40%;
   object-fit: cover;
-  transition: filter 1s;
+  transition: opacity 1s;
   filter: grayscale(1);
 }
 
