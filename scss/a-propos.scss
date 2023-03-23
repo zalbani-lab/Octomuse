@@ -503,10 +503,8 @@ footer {
         }
     }
 
-    div {
+    .socialMedia {
         width: 10%;
-        display: flex;
-        justify-content: space-around;
     }
 
     .logoFooter {
@@ -741,13 +739,11 @@ footer {
                 }
             }
 
-            div {
-                justify-content: normal;
-                margin-left: 30px;
-
-                a {
-                    margin-right: 20px;
-                }
+            .socialMedia {
+                width: 25%;
+                flex-direction: initial;
+                justify-content: space-between;
+                margin-top: 30px;
             }
 
             .logoFooter {

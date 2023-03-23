@@ -351,10 +351,8 @@ footer ul a {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-footer div {
+footer .socialMedia {
   width: 10%;
-  display: flex;
-  justify-content: space-around;
 }
 footer .logoFooter {
   width: 100px;
@@ -559,12 +557,11 @@ footer .logoFooter {
   body footer ul li {
     margin-bottom: 20px;
   }
-  body footer div {
-    justify-content: normal;
-    margin-left: 30px;
-  }
-  body footer div a {
-    margin-right: 20px;
+  body footer .socialMedia {
+    width: 25%;
+    flex-direction: initial;
+    justify-content: space-between;
+    margin-top: 30px;
   }
   body footer .logoFooter {
     margin: 60px 0 20px 30px;
