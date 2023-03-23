@@ -21,24 +21,30 @@
 /*********************************************/
 /****************** GENERAL ******************/
 /*********************************************/
-h2 {
+body main h1 {
+  font-family: "Glook";
+  font-size: 3.75rem;
+  line-height: 70px;
+  margin-bottom: 42px;
+}
+body main h2 {
   font-family: "Glook";
   font-size: 2.25rem;
+  width: 100%;
+  margin: 24px 0;
 }
-
-h3 {
+body main h3 {
   font-family: "Glook";
   font-size: 1.5rem;
+  margin: 12px 0;
 }
-
-h4 {
+body main h4 {
   font-family: "Neusa-DemiBold";
   font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-p {
+body main p {
   font-family: "Neusa";
   font-size: 1rem;
   line-height: 26px;
@@ -53,10 +59,14 @@ a {
 }
 
 li {
-  font-family: "Neusa";
-  text-transform: uppercase;
-  padding-bottom: 12px;
-  font-size: 18px;
+  list-style-type: none;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
 }
 
 hr {
@@ -144,14 +154,17 @@ body header button .hamburger-box {
 }
 body header nav {
   width: 50%;
+}
+body header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body header nav a {
+body header nav ul li a p {
+  width: max-content;
   position: relative;
 }
-body header nav a:hover::after {
+body header nav ul li a p:hover::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -162,10 +175,17 @@ body header nav a:hover::after {
   right: -10px;
   z-index: -1;
 }
-body header nav .btnPrimaire::after {
+body header nav ul li .btnPrimaire {
+  display: block;
+  width: 100px;
+}
+body header nav ul li .btnPrimaire p:hover::after {
   display: none;
 }
-body header nav .actif::after {
+body header nav ul li .actif {
+  position: relative;
+}
+body header nav ul li .actif::after {
   position: absolute;
   content: "";
   background: url(../img/icone/stars_pink.png) no-repeat;
@@ -176,8 +196,10 @@ body header nav .actif::after {
   right: -10px;
   z-index: -1;
 }
-body header nav img {
-  display: none;
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 body button {
   font-family: "Neusa-DemiBold";
@@ -190,9 +212,6 @@ body button {
 
 .heroAbout {
   width: 80%;
-}
-.heroAbout h1 {
-  font-size: 5rem;
 }
 .heroAbout div {
   display: flex;
@@ -216,11 +235,17 @@ body button {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.skills h2 {
-  width: 100%;
-}
 .skills div {
   width: 45%;
+}
+.skills div ul {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 24px;
+}
+.skills div ul li {
+  margin: 6px 0;
+  list-style: circle;
 }
 .skills hr {
   width: 100%;
@@ -230,7 +255,7 @@ body button {
 
 .experience {
   width: 80%;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   position: relative;
 }
 .experience::after {
@@ -247,12 +272,10 @@ body button {
 .experience .experienceType {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 .experience .experienceType div {
   width: 30%;
-}
-.experience .experienceType div h3 {
-  margin-bottom: 0;
 }
 .experience .experienceType div p {
   font-family: "Neusa-DemiBold";
@@ -274,6 +297,9 @@ body button {
   flex-direction: column;
   align-items: center;
   color: #F4F0EE;
+}
+.projectModule h2 {
+  text-align: center;
 }
 .projectModule .listProject {
   display: flex;
@@ -387,7 +413,6 @@ footer ul {
 footer ul a {
   color: #F4F0EE;
   font-family: "Neusa-DemiBold";
-  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -420,9 +445,6 @@ footer .logoFooter {
   }
 }
 @media (max-width: 960px) {
-  body h2 {
-    font-size: 1.875rem;
-  }
   body hr {
     margin-bottom: 24px;
   }
@@ -450,35 +472,34 @@ footer .logoFooter {
     left: 0;
     top: 0;
     padding: 42px;
-    box-sizing: border-box;
   }
-  body header nav.active a {
+  body header nav.active ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  body header nav.active ul li {
+    width: 100%;
+  }
+  body header nav.active ul li a {
+    display: block;
     color: #F4F0EE;
     background-color: rgba(244, 240, 238, 0.1215686275);
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
   }
-  body header nav.active a:first-of-type {
-    margin-top: 60px;
+  body header nav.active ul li a:first-of-type {
+    margin-top: 20px;
   }
-  body header nav.active img {
-    display: block;
-    margin-top: 42px;
-  }
-  body header nav.active .btnPrimaireNega {
+  body header nav.active ul li .btnPrimaire {
     width: 100%;
     padding: 18px 24px;
-    box-sizing: border-box;
     border-radius: 10px;
     border: none;
   }
   body .heroAbout {
     width: 90%;
-  }
-  body .heroAbout h1 {
-    font-size: 3rem;
   }
   body .heroAbout div {
     flex-direction: column;
@@ -514,7 +535,6 @@ footer .logoFooter {
   }
   body .experience .experienceType .description {
     width: 100%;
-    font-size: 1.125rem;
     line-height: 36px;
   }
   body .projectModule {

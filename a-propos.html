@@ -3,67 +3,79 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/a-propos.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/a-propos.css"/>
     <link rel="stylesheet" href="css/hamburger.css">
     <script src="javascript/menu.js"></script>
     <title>Octomuse</title>
   </head>
   <body>
     <header>
-      <img src="img/image/logo.svg" alt="logo Octomuse">
+      <img src="img/image/logo.svg" alt="Octomuse">
       <button id="menuButton" class="hamburger hamburger--spring" onclick="changeClass()" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
       <nav id="openMenu">
-        <a href="index.html">accueil</a>
-        <a href="portfolio.html">portfolio</a>
-        <a href="prestations.html">prestations</a>
-        <a class="actif" href="a-propos.html">à propos</a>
-        <a class="btnPrimaire" href="">contact</a>
-        <img src="img/image/logo-nega.svg" alt="logo Octomuse">
+        <ul>
+          <li>
+            <a href="index.html"><p>accueil</p></a>
+          </li>
+          <li>
+            <a href="portfolio.html"><p>portfolio</p></a>    
+          </li>
+          <li>
+            <a href="prestations.html"><p>prestations</p></a>
+          </li>
+          <li>
+            <a class="actif" href="a-propos.html"><p>à propos</p></a>
+          </li>
+          <li>
+            <a class="btnPrimaire" href=""><p>contact</p></a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <div class="heroAbout">
+    <main>
+      <div class="heroAbout">
         <h1>À propos d’Octomuse</h1>
         <hr>
         <div>
-            <img src="img/image/anais.jpg" alt="photo freelance Octomuse">
-            <p>Je suis <strong>Anaïs</strong>, <strong>graphiste web</strong> depuis plus de 3 ans, et j’ai décidé il y a peu de me lancer en <strong>freelance</strong>. Mon objectif est d’<strong> élargir le potentiel de votre marque</strong> et de la décliner sur tous les supports existants.
-                <br><br>
-                De nos jours, il est important qu'une entreprise est connaissance de toute l'étendue des possibilités pour faire connaître sa marque aux yeux de tous.</p>
+          <img src="img/image/anais.jpg" alt="photo freelance Octomuse">
+          <p>Je suis <strong>Anaïs</strong>, <strong>graphiste web</strong> depuis plus de 3 ans, et j’ai décidé il y a peu de me lancer en <strong>freelance</strong>. Mon objectif est d’<strong> élargir le potentiel de votre marque</strong> et de la décliner sur tous les supports existants.
+            <br><br>
+            De nos jours, il est important qu'une entreprise est connaissance de toute l'étendue des possibilités pour faire connaître sa marque aux yeux de tous.</p>
         </div>
         <hr>
-    </div>
-    <div class="skills">
+      </div>
+      <div class="skills">
         <h2>Compétences</h2>
         <div>
-            <h3>Graphisme</h3>
-            <ul>
-                <li>UX/UI design (site admin et application mobile)</li>
-                <li>User Story</li>
-                <li>Site flow</li>
-                <li>Wireframe</li>
-                <li>Prototype</li>
-                <li>Test utilisateur</li>
-                <li>Branding</li>
-            </ul>
+          <h3>Graphisme</h3>
+          <ul>
+            <li>UX/UI design (site admin et application mobile)</li>
+            <li>User Story</li>
+            <li>Site flow</li>
+            <li>Wireframe</li>
+            <li>Prototype</li>
+            <li>Test utilisateur</li>
+            <li>Branding</li>
+          </ul>
         </div>
         <div>
-            <h3>Développement front-end</h3>
+          <h3>Développement front-end</h3>
             <ul>
-                <li>HTML 5</li>
-                <li>CSS 3</li>
-                <li>SASS</li>
-                <li>Javascript</li>
-                <li>Jquerry</li>
+              <li>HTML 5</li>
+              <li>CSS 3</li>
+              <li>SASS</li>
+              <li>Javascript</li>
+              <li>Jquerry</li>
             </ul>
         </div>
         <hr>
-    </div>
-    <div class="experience">
+      </div>
+      <div class="experience">
         <h2>Expériences</h2>
         <div class="experienceType">
             <div>
@@ -90,44 +102,45 @@
                 réseaux sociaux ainsi que tous les supports visuels prints de
                 l’entreprise.</p>
         </div>
-    </div>
-    <div class="projectModule">
-      <h2>Retrouvez d’autres projets</h2>
-      <div class="listProject">
-        <a href="randodo.html">
-          <h3>Application Randodo</h3>
-          <img src="img/image/project/randodo/randodo_2.jpg" alt="">
-        </a>
-        <a href="mapraa.html">
-          <h3>Création d'identité Mapraa”</h3>
-          <img src="img/image/project/mapraa/mapraa_1.jpg" alt="">
-        </a>
       </div>
-      <a href="portfolio.html" class="btnPrimaireNega">Voir + de projets</a>
-    </div>
-    <div class="contactModule">
+      <div class="projectModule">
+        <h2>Retrouvez d’autres projets</h2>
+        <div class="listProject">
+          <a href="randodo.html">
+            <h3>Application Randodo</h3>
+            <img src="img/image/project/randodo/randodo_2.jpg" alt="">
+          </a>
+          <a href="mapraa.html">
+           <h3>Création d'identité Mapraa”</h3>
+            <img src="img/image/project/mapraa/mapraa_1.jpg" alt="">
+          </a>
+        </div>
+        <a href="portfolio.html" class="btnPrimaireNega">Voir + de projets</a>
+      </div>
+      <div class="contactModule">
         <div>
           <h2>Vous souhaitez collaborer avec Octomuse ?</h2>
           <p>Nous serions ravis de pouvoir échanger avec vous autour d’un petit café ! </p>
           <a class="btnPrimaire" href="">Contacter</a>
         </div>
-        <img src="img/image/contact_illustration.svg" alt="">
+        <img src="img/image/contact_illustration.png" alt="">
       </div>
-      <footer>
-        <ul>
-          <li><a href="portfolio.html">portfolio</a></li>
-          <li><a href="prestations.html">prestations</a></li>
-          <li><a href="a-propos.html">à propos</a></li>
-          <li><a href="">contact</a></li>
-          <li><a href="">mentions légales</a></li>
-          <li><a href="">CGV</a></li>
-        </ul>
-        <div>
-          <a href=""><img src="img/icone/insta.svg" alt="icône instagram Octomuse"></a>
-          <a href=""><img src="img/icone/linkedin.svg" alt="icône linkedin Octomuse"></a>
-          <a href=""><img src="img/icone/behance.svg" alt="icône behance Octomuse"></a>
-        </div>
-        <img class="logoFooter" src="img/image/logo-nega.svg" alt="logo Octomuse">
-      </footer>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="prestations.html">prestations</a></li>
+        <li><a href="a-propos.html">à propos</a></li>
+        <li><a href="">contact</a></li>
+        <li><a href="">mentions légales</a></li>
+        <li><a href="">CGV</a></li>
+      </ul>
+      <div>
+        <a href=""><img src="img/icone/insta.svg" alt="icône instagram Octomuse"></a>
+        <a href=""><img src="img/icone/linkedin.svg" alt="icône linkedin Octomuse"></a>
+        <a href=""><img src="img/icone/behance.svg" alt="icône behance Octomuse"></a>
+      </div>
+      <img class="logoFooter" src="img/image/logo-nega.svg" alt="logo Octomuse">
+    </footer>
   </body>
 </html>

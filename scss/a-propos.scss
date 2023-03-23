@@ -37,28 +37,43 @@ $third-color : #ECD3D3;
 /****************** GENERAL ******************/
 /*********************************************/
 
-h2 {
-    font-family: 'Glook';
-    font-size: pxToRem(36px);
-}
+body {
+    main {
 
-h3 {
-    font-family: 'Glook';
-    font-size: pxToRem(24px);
-}
+        h1 {
+            font-family: 'Glook';
+            font-size: pxToRem(60px);
+            line-height: 70px;
+            margin-bottom: 42px;
+        }
 
-h4 {
-    font-family: 'Neusa-DemiBold';
-    font-size: pxToRem(20px);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+        h2 {
+            font-family: 'Glook';
+            font-size: pxToRem(36px);
+            width: 100%;
+            margin: 24px 0;
+        }
 
-p {
-    font-family: 'Neusa';
-    font-size: pxToRem(16px);
-    line-height: 26px;
-    letter-spacing: 2px;
+        h3 {
+            font-family: 'Glook';
+            font-size: pxToRem(24px);
+            margin: 12px 0;
+        }
+
+        h4 {
+            font-family: 'Neusa-DemiBold';
+            font-size: pxToRem(20px);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-family: 'Neusa';
+            font-size: pxToRem(16px);
+            line-height: 26px;
+            letter-spacing: 2px;
+        }
+    }
 }
 
 a {
@@ -69,10 +84,14 @@ a {
 }
 
 li {
-    font-family: 'Neusa';
-    text-transform: uppercase;
-    padding-bottom: 12px;
-    font-size: 18px;
+    list-style-type: none;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0;
 }
 
 hr {
@@ -168,48 +187,67 @@ body {
 
         nav {
             width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
 
-            a {
-                position: relative;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
 
-                &:hover::after {
-                    position: absolute;
-                    content: "";
-                    background: url(../img/icone/stars_pink.png) no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    background-size: cover;
-                    top: -5px;
-                    right: -10px;
-                    z-index: -1;
+                li {
+                    a {
+                        p {
+                            width: max-content;
+                            position: relative;
+
+                            &:hover::after {
+                                position: absolute;
+                                content: "";
+                                background: url(../img/icone/stars_pink.png) no-repeat;
+                                width: 18px;
+                                height: 18px;
+                                background-size: cover;
+                                top: -5px;
+                                right: -10px;
+                                z-index: -1;
+                            }
+                        }
+                    }
+
+                    .btnPrimaire {
+                        display: block;
+                        width: 100px;
+
+                        p {
+                            &:hover::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .actif {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            background: url(../img/icone/stars_pink.png) no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            background-size: cover;
+                            top: -5px;
+                            right: -10px;
+                            z-index: -1;
+                        }
+                    }
                 }
-            }
-
-            .btnPrimaire::after {
-                display: none;
-            }
-
-            .actif {
-                &::after {
-                    position: absolute;
-                    content: "";
-                    background: url(../img/icone/stars_pink.png) no-repeat;
-                    width: 18px;
-                    height: 18px;
-                    background-size: cover;
-                    top: -5px;
-                    right: -10px;
-                    z-index: -1;
-                }
-            }
-
-            img {
-                display: none;
             }
         }
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     button {
@@ -224,10 +262,6 @@ body {
 
 .heroAbout {
     width: 80%;
-
-    h1 {
-        font-size: pxToRem(80px);
-    }
 
     div {
         display: flex;
@@ -255,12 +289,19 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    h2 {
-        width: 100%;
-    }
-
     div {
         width: 45%;
+
+        ul {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 24px;
+
+            li {
+                margin: 6px 0;
+                list-style: circle;
+            }
+        }
     }
 
     hr {
@@ -272,7 +313,7 @@ body {
 
 .experience {
     width: 80%;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     position: relative;
 
     &::after {
@@ -290,13 +331,10 @@ body {
     .experienceType {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 30px;
 
         div {
             width: 30%;
-
-            h3 {
-                margin-bottom: 0;
-            }
 
             p {
                 font-family: 'Neusa-DemiBold';
@@ -324,6 +362,10 @@ body {
     flex-direction: column;
     align-items: center;
     color: $secondary-color;
+
+    h2 {
+        text-align: center;
+    }
 
     .listProject {
         display: flex;
@@ -456,7 +498,6 @@ footer {
         a {
             color: $secondary-color;
             font-family: 'Neusa-DemiBold';
-            font-size: pxToRem(16px);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -506,10 +547,6 @@ footer {
 @media (max-width: 960px) {
     body {
 
-        h2 {
-            font-size: pxToRem(30px);
-        }
-
         hr {
             margin-bottom: 24px;
         }
@@ -544,32 +581,36 @@ footer {
                     left: 0;
                     top: 0;
                     padding: 42px;
-                    box-sizing: border-box;
 
-                    a {
-                        color: $secondary-color;
-                        background-color: #f4f0ee1f;
+                    ul {
+                        flex-direction: column;
+                        align-items: flex-start;
                         width: 100%;
-                        padding: 18px 24px;
-                        box-sizing: border-box;
-                        border-radius: 10px;
 
-                        &:first-of-type {
-                            margin-top: 60px;
+                        li {
+                            width: 100%;
+
+                            a {
+                                display: block;
+                                color: $secondary-color;
+                                background-color: #f4f0ee1f;
+                                width: 100%;
+                                padding: 18px 24px;
+                                border-radius: 10px;
+
+                                &:first-of-type {
+                                    margin-top: 20px;
+                                }
+                            }
+
+                            .btnPrimaire {
+                                width: 100%;
+                                padding: 18px 24px;
+                                border-radius: 10px;
+                                border: none;
+                            }
                         }
-                    }
 
-                    img {
-                        display: block;
-                        margin-top: 42px;
-                    }
-
-                    .btnPrimaireNega {
-                        width: 100%;
-                        padding: 18px 24px;
-                        box-sizing: border-box;
-                        border-radius: 10px;
-                        border: none;
                     }
                 }
 
@@ -578,10 +619,6 @@ footer {
 
         .heroAbout {
             width: 90%;
-
-            h1 {
-                font-size: pxToRem(48px);
-            }
 
             div {
                 flex-direction: column;
@@ -624,7 +661,6 @@ footer {
 
                 .description {
                     width: 100%;
-                    font-size: pxToRem(18px);
                     line-height: 36px;
                 }
             }
