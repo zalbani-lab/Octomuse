@@ -611,6 +611,43 @@ footer {
             }
         }
 
+        main {
+            display: flex;
+
+            h1 {
+                font-family: 'Glook';
+                font-size: pxToRem(48px);
+                line-height: 48px;
+            }
+
+            h2 {
+                font-family: 'Glook';
+                font-size: pxToRem(30px);
+                line-height: 36px;
+            }
+
+            h3 {
+                font-family: 'Glook';
+                font-size: pxToRem(18px);
+                line-height: 24px;
+            }
+
+            h4 {
+                font-family: 'Neusa-DemiBold';
+                font-size: pxToRem(16px);
+                line-height: 32px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            p {
+                font-family: 'Neusa';
+                font-size: pxToRem(16px);
+                line-height: 26px;
+                letter-spacing: 2px;
+            }
+        }
+
         .heroAbout {
             width: 90%;
 

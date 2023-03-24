@@ -684,6 +684,13 @@ footer .logoFooter {
   body main .prestationsHome .listPresta {
     width: 100%;
   }
+  body main .prestationsHome .listPresta div h3 {
+    font-size: 1rem;
+    line-height: 32px;
+  }
+  body main .prestationsHome .listPresta div img {
+    margin: 0 12px;
+  }
   body main .prestationsHome .listPresta a {
     width: 100%;
     display: flex;

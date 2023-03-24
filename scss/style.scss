@@ -837,6 +837,16 @@ footer {
                 .listPresta {
                     width: 100%;
 
+                    div {
+                        h3 {
+                            font-size: pxToRem(16px);
+                            line-height: 32px;
+                        }
+
+                        img {
+                            margin: 0 12px;
+                        }
+                    }
 
                     a {
                         width: 100%;

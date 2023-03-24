@@ -493,6 +493,37 @@ footer .logoFooter {
     border-radius: 10px;
     border: none;
   }
+  body main {
+    display: flex;
+  }
+  body main h1 {
+    font-family: "Glook";
+    font-size: 3rem;
+    line-height: 48px;
+  }
+  body main h2 {
+    font-family: "Glook";
+    font-size: 1.875rem;
+    line-height: 36px;
+  }
+  body main h3 {
+    font-family: "Glook";
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+  body main h4 {
+    font-family: "Neusa-DemiBold";
+    font-size: 1rem;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  body main p {
+    font-family: "Neusa";
+    font-size: 1rem;
+    line-height: 26px;
+    letter-spacing: 2px;
+  }
   body .heroAbout {
     width: 90%;
   }

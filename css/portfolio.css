@@ -502,7 +502,7 @@ footer .logoFooter {
   }
   body main .listProject .projetType div::after {
     left: 0;
-    bottom: -50%;
+    bottom: -35%;
   }
   body main .listProject .projetType img {
     width: 100%;
