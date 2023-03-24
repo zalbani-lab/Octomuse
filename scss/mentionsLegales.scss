@@ -1,0 +1,453 @@
+@use 'variable' as *;
+@use 'sass:math';
+
+@function pxToRem($size) {
+    @return math.div($size, 16px) * 1rem;
+}
+
+@font-face {
+    font-family: 'Neusa';
+    src: url(../font/Neusa-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Neusa-Medium';
+    src: url(../font/Neusa-Medium.otf);
+}
+
+@font-face {
+    font-family: 'Neusa-DemiBold';
+    src: url(../font/Neusa-DemiBold.otf);
+}
+
+@font-face {
+    font-family: 'Neusa-SemiBold';
+    src: url(../font/Neusa-SemiBold.otf);
+}
+
+@font-face {
+    font-family: 'Glook';
+    src: url(../font/Gloock-Regular.ttf);
+}
+
+/*********************************************/
+/****************** GENERAL ******************/
+/*********************************************/
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    color: $primary-color;
+    width: 100%;
+
+    &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        background-image: url('../img/image/courbe.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::after {
+        z-index: -2;
+        content: '';
+        position: absolute;
+        top: 5%;
+        left: 20%;
+        border-radius: 800px;
+        background: radial-gradient(circle, $third-color 20%, #f4f0ee4f 60%);
+        width: 800px;
+        height: 800px;
+    }
+
+    main {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h1 {
+            font-family: 'Glook';
+            font-size: pxToRem(60px);
+            line-height: 70px;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            margin: 24px 0 12px 0;
+            font-family: 'Glook';
+            font-size: pxToRem(36px);
+        }
+
+        p {
+            font-family: 'Neusa';
+            font-size: pxToRem(16px);
+            line-height: 26px;
+            letter-spacing: 2px;
+
+            &:last-of-type {
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+    letter-spacing: 2px;
+    font-size: pxToRem(16px);
+    line-height: 26px;
+}
+
+li {
+    list-style-type: circle;
+    font-family: 'Neusa';
+    font-size: pxToRem(16px);
+    line-height: 26px;
+    letter-spacing: 2px;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+.btnPrimaire {
+    font-family: 'Neusa-SemiBold';
+    text-transform: uppercase;
+    background-color: #f4f0ee00;
+    border: solid 1px $primary-color;
+    border-radius: 50px;
+    padding: 8px 18px;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px $primary-color;
+    }
+}
+
+.btnPrimaireNega {
+    font-family: 'Neusa-SemiBold';
+    text-transform: uppercase;
+    color: $secondary-color;
+    background-color: #f4f0ee00;
+    border: solid 1px $secondary-color;
+    border-radius: 50px;
+    padding: 8px 18px;
+    transition: transform 0.2s;
+
+    a {
+        color: $secondary-color;
+    }
+
+    &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px $secondary-color;
+    }
+}
+
+/*********************************************/
+/****************** ANIMATION ****************/
+/*********************************************/
+
+.messagedefilant {
+    position: relative;
+    display: block;
+    margin: 80px 0 0 0;
+    padding: 10px 0;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    overflow: hidden;
+
+    div {
+        position: absolute;
+        top: 30px;
+        min-width: 100%;
+
+        &:after {
+            position: relative;
+            display: inline-block;
+            font-size: pxToRem(30px);
+            white-space: nowrap;
+            top: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: attr(data-text);
+            animation: defilement2 10s infinite linear;
+            font-family: 'Neusa';
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        span {
+            animation: defilement 10s infinite linear;
+            font-family: 'Neusa';
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            font-size: pxToRem(30px);
+            white-space: nowrap;
+            top: 0;
+        }
+    }
+}
+
+
+@keyframes defilement {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -100%;
+    }
+}
+
+@keyframes defilement2 {
+    0% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+/*********************************************/
+/******************** HOME *******************/
+/*********************************************/
+body {
+
+    header {
+        font-family: 'Neusa-SemiBold';
+        text-transform: uppercase;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 24px 0 60px 0;
+
+        button {
+            .hamburger-box {
+                display: none;
+            }
+        }
+
+        nav {
+            width: 50%;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                li {
+                    list-style-type: none;
+                    font-family: 'Neusa-SemiBold';
+
+                    a {
+                        width: max-content;
+                        position: relative;
+
+                        &:hover::after {
+                            position: absolute;
+                            content: "";
+                            background: url(../img/icone/stars_pink.png) no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            background-size: cover;
+                            top: -5px;
+                            right: -10px;
+                            z-index: -1;
+                        }
+                    }
+
+                    .btnPrimaire {
+                        display: block;
+                        width: 100px;
+
+                        &:hover::after {
+                            display: none;
+                        }
+                    }
+
+                    .actif {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            background: url(../img/icone/stars_pink.png) no-repeat;
+                            width: 18px;
+                            height: 18px;
+                            background-size: cover;
+                            top: -5px;
+                            right: -10px;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    background-color: $primary-color;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    ul {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 0;
+
+        a {
+            color: $secondary-color;
+            font-family: 'Neusa-DemiBold';
+            font-size: pxToRem(16px);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+
+    .socialMedia {
+        width: 10%;
+    }
+
+    .logoFooter {
+        width: 100px;
+        height: auto;
+        margin: 24px 0;
+    }
+}
+
+/*********************************************/
+/***************** RESPONSIVE ****************/
+/*********************************************/
+
+@media (max-width: 1280px) {
+    body {
+
+        &::after {
+            left: 0;
+        }
+
+        header {
+            nav {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    body {
+        &::after {
+            left: 0;
+            width: 300px;
+            height: 300px;
+        }
+
+        header {
+
+            button {
+                .hamburger-box {
+                    display: block;
+                }
+            }
+
+            nav {
+                display: none;
+
+                &.active {
+                    z-index: 1;
+                    position: fixed;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: flex-start;
+                    background-color: $primary-color;
+                    width: 100%;
+                    height: 100vh;
+                    left: 0;
+                    top: 0;
+                    padding: 42px;
+
+                    ul {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        width: 100%;
+
+                        li {
+                            width: 100%;
+
+                            a {
+                                display: block;
+                                color: $secondary-color;
+                                background-color: #f4f0ee1f;
+                                width: 100%;
+                                padding: 18px 24px;
+                                border-radius: 10px;
+
+                                &:first-of-type {
+                                    margin-top: 20px;
+                                }
+                            }
+
+                            .btnPrimaire {
+                                width: 100%;
+                                padding: 18px 24px;
+                                border-radius: 10px;
+                                border: none;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+        footer {
+            flex-direction: column;
+            align-items: normal;
+            padding: 48px 0;
+
+            ul {
+                align-items: normal;
+                flex-direction: column;
+                width: 80%;
+                margin-left: 36px;
+
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .socialMedia {
+                width: 25%;
+                flex-direction: initial;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+
+            .logoFooter {
+                margin: 30px 0 20px 30px;
+            }
+        }
+    }
+}

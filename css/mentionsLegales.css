@@ -1,0 +1,374 @@
+@font-face {
+  font-family: "Neusa";
+  src: url(../font/Neusa-Regular.otf);
+}
+@font-face {
+  font-family: "Neusa-Medium";
+  src: url(../font/Neusa-Medium.otf);
+}
+@font-face {
+  font-family: "Neusa-DemiBold";
+  src: url(../font/Neusa-DemiBold.otf);
+}
+@font-face {
+  font-family: "Neusa-SemiBold";
+  src: url(../font/Neusa-SemiBold.otf);
+}
+@font-face {
+  font-family: "Glook";
+  src: url(../font/Gloock-Regular.ttf);
+}
+/*********************************************/
+/****************** GENERAL ******************/
+/*********************************************/
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F4F0EE;
+  color: #083837;
+  width: 100%;
+}
+body::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background-image: url("../img/image/courbe.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+body::after {
+  z-index: -2;
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  border-radius: 800px;
+  background: radial-gradient(circle, #ECD3D3 20%, rgba(244, 240, 238, 0.3098039216) 60%);
+  width: 800px;
+  height: 800px;
+}
+body main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body main h1 {
+  font-family: "Glook";
+  font-size: 3.75rem;
+  line-height: 70px;
+  margin-bottom: 18px;
+}
+body main h2 {
+  margin: 24px 0 12px 0;
+  font-family: "Glook";
+  font-size: 2.25rem;
+}
+body main p {
+  font-family: "Neusa";
+  font-size: 1rem;
+  line-height: 26px;
+  letter-spacing: 2px;
+}
+body main p:last-of-type {
+  margin-bottom: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #083837;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  line-height: 26px;
+}
+
+li {
+  list-style-type: circle;
+  font-family: "Neusa";
+  font-size: 1rem;
+  line-height: 26px;
+  letter-spacing: 2px;
+}
+
+ul {
+  padding-left: 24px;
+}
+
+.btnPrimaire {
+  font-family: "Neusa-SemiBold";
+  text-transform: uppercase;
+  background-color: rgba(244, 240, 238, 0);
+  border: solid 1px #083837;
+  border-radius: 50px;
+  padding: 8px 18px;
+  transition: transform 0.2s;
+}
+.btnPrimaire:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #083837;
+}
+
+.btnPrimaireNega {
+  font-family: "Neusa-SemiBold";
+  text-transform: uppercase;
+  color: #F4F0EE;
+  background-color: rgba(244, 240, 238, 0);
+  border: solid 1px #F4F0EE;
+  border-radius: 50px;
+  padding: 8px 18px;
+  transition: transform 0.2s;
+}
+.btnPrimaireNega a {
+  color: #F4F0EE;
+}
+.btnPrimaireNega:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px #F4F0EE;
+}
+
+/*********************************************/
+/****************** ANIMATION ****************/
+/*********************************************/
+.messagedefilant {
+  position: relative;
+  display: block;
+  margin: 80px 0 0 0;
+  padding: 10px 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  overflow: hidden;
+}
+.messagedefilant div {
+  position: absolute;
+  top: 30px;
+  min-width: 100%;
+}
+.messagedefilant div:after {
+  position: relative;
+  display: inline-block;
+  font-size: 1.875rem;
+  white-space: nowrap;
+  top: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-text);
+  animation: defilement2 10s infinite linear;
+  font-family: "Neusa";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.messagedefilant div span {
+  animation: defilement 10s infinite linear;
+  font-family: "Neusa";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  font-size: 1.875rem;
+  white-space: nowrap;
+  top: 0;
+}
+
+@keyframes defilement {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+@keyframes defilement2 {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+/*********************************************/
+/******************** HOME *******************/
+/*********************************************/
+body header {
+  font-family: "Neusa-SemiBold";
+  text-transform: uppercase;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0 60px 0;
+}
+body header button .hamburger-box {
+  display: none;
+}
+body header nav {
+  width: 50%;
+}
+body header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header nav ul li {
+  list-style-type: none;
+  font-family: "Neusa-SemiBold";
+}
+body header nav ul li a {
+  width: max-content;
+  position: relative;
+}
+body header nav ul li a:hover::after {
+  position: absolute;
+  content: "";
+  background: url(../img/icone/stars_pink.png) no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  top: -5px;
+  right: -10px;
+  z-index: -1;
+}
+body header nav ul li .btnPrimaire {
+  display: block;
+  width: 100px;
+}
+body header nav ul li .btnPrimaire:hover::after {
+  display: none;
+}
+body header nav ul li .actif {
+  position: relative;
+}
+body header nav ul li .actif::after {
+  position: absolute;
+  content: "";
+  background: url(../img/icone/stars_pink.png) no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  top: -5px;
+  right: -10px;
+  z-index: -1;
+}
+
+footer {
+  background-color: #083837;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer ul {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+}
+footer ul a {
+  color: #F4F0EE;
+  font-family: "Neusa-DemiBold";
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+footer .socialMedia {
+  width: 10%;
+}
+footer .logoFooter {
+  width: 100px;
+  height: auto;
+  margin: 24px 0;
+}
+
+/*********************************************/
+/***************** RESPONSIVE ****************/
+/*********************************************/
+@media (max-width: 1280px) {
+  body::after {
+    left: 0;
+  }
+  body header nav {
+    width: 60%;
+  }
+}
+@media (max-width: 960px) {
+  body::after {
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+  body header button .hamburger-box {
+    display: block;
+  }
+  body header nav {
+    display: none;
+  }
+  body header nav.active {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #083837;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    padding: 42px;
+  }
+  body header nav.active ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  body header nav.active ul li {
+    width: 100%;
+  }
+  body header nav.active ul li a {
+    display: block;
+    color: #F4F0EE;
+    background-color: rgba(244, 240, 238, 0.1215686275);
+    width: 100%;
+    padding: 18px 24px;
+    border-radius: 10px;
+  }
+  body header nav.active ul li a:first-of-type {
+    margin-top: 20px;
+  }
+  body header nav.active ul li .btnPrimaire {
+    width: 100%;
+    padding: 18px 24px;
+    border-radius: 10px;
+    border: none;
+  }
+  body footer {
+    flex-direction: column;
+    align-items: normal;
+    padding: 48px 0;
+  }
+  body footer ul {
+    align-items: normal;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 36px;
+  }
+  body footer ul li {
+    margin-bottom: 20px;
+  }
+  body footer .socialMedia {
+    width: 25%;
+    flex-direction: initial;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  body footer .logoFooter {
+    margin: 30px 0 20px 30px;
+  }
+}
+
+/*# sourceMappingURL=mentionsLegales.css.map */
