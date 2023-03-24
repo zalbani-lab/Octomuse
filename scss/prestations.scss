@@ -299,13 +299,10 @@ body {
                     margin-bottom: 42px;
                 }
 
-                a {
+                .btnPrimaire {
                     display: block;
                     width: 118px;
-
-                    p {
-                        background-color: #ecd3d300;
-                    }
+                    background-color: #08383700;
                 }
             }
 
@@ -338,7 +335,7 @@ body {
     .listProject {
         display: flex;
         justify-content: center;
-        margin: 42px 0 24px 0;
+        margin: 42px 0;
 
         a {
             position: relative;
@@ -394,14 +391,11 @@ body {
         }
     }
 
-    button {
-        font-family: 'Neusa-DemiBold';
-        letter-spacing: 2px;
-        text-decoration: underline;
-        border: none;
-        margin-top: 48px;
-        background-color: $primary-color;
-        color: $secondary-color;
+    .btnPrimaireNega {
+
+        a {
+            color: $secondary-color;
+        }
     }
 
 }

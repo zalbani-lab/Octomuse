@@ -248,12 +248,10 @@ body button {
 .Presta .listPrest div:last-of-type p {
   margin-bottom: 42px;
 }
-.Presta .listPrest div:last-of-type a {
+.Presta .listPrest div:last-of-type .btnPrimaire {
   display: block;
   width: 118px;
-}
-.Presta .listPrest div:last-of-type a p {
-  background-color: rgba(236, 211, 211, 0);
+  background-color: rgba(8, 56, 55, 0);
 }
 .Presta .listPrest div h3 {
   margin: 12px 0;
@@ -279,7 +277,7 @@ body button {
 .projectModule .listProject {
   display: flex;
   justify-content: center;
-  margin: 42px 0 24px 0;
+  margin: 42px 0;
 }
 .projectModule .listProject a {
   position: relative;
@@ -325,13 +323,7 @@ body button {
   transition: filter 1s;
   filter: grayscale(1);
 }
-.projectModule button {
-  font-family: "Neusa-DemiBold";
-  letter-spacing: 2px;
-  text-decoration: underline;
-  border: none;
-  margin-top: 48px;
-  background-color: #083837;
+.projectModule .btnPrimaireNega a {
   color: #F4F0EE;
 }
 

@@ -449,14 +449,17 @@ body {
             width: 55%;
 
             p {
-                margin-bottom: 42px;
+                margin: 18px 0 36px 0;
             }
 
-            a {
+            .btnPrimaire {
                 display: block;
                 width: 115px;
-                color: $primary-color;
                 border: solid 1px $primary-color;
+
+                a {
+                    color: $primary-color;
+                }
             }
         }
 

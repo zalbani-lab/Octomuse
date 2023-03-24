@@ -371,13 +371,15 @@ body header nav ul li .actif::after {
   width: 55%;
 }
 .contactModule .content div p {
-  margin-bottom: 42px;
+  margin: 18px 0 36px 0;
 }
-.contactModule .content div a {
+.contactModule .content div .btnPrimaire {
   display: block;
   width: 115px;
-  color: #083837;
   border: solid 1px #083837;
+}
+.contactModule .content div .btnPrimaire a {
+  color: #083837;
 }
 .contactModule .content img {
   z-index: 1;

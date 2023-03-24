@@ -350,14 +350,7 @@ body button {
   transition: filter 1s;
   filter: grayscale(1);
 }
-.projectModule button {
-  font-family: "Neusa-DemiBold";
-  font-size: 1rem;
-  letter-spacing: 2px;
-  text-decoration: underline;
-  border: none;
-  margin-top: 48px;
-  background-color: #083837;
+.projectModule .btnPrimaireNega a {
   color: #F4F0EE;
 }
 
@@ -384,7 +377,11 @@ body button {
   width: 55%;
 }
 .contactModule div p {
-  margin-bottom: 42px;
+  margin: 18px 0 36px 0;
+}
+.contactModule div .btnPrimaire {
+  display: block;
+  width: 118px;
 }
 .contactModule img {
   width: 30%;

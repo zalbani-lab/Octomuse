@@ -423,17 +423,11 @@ body {
         }
     }
 
-    button {
-        font-family: 'Neusa-DemiBold';
-        font-size: pxToRem(16px);
-        letter-spacing: 2px;
-        text-decoration: underline;
-        border: none;
-        margin-top: 48px;
-        background-color: $primary-color;
-        color: $secondary-color;
+    .btnPrimaireNega {
+        a {
+            color: $secondary-color;
+        }
     }
-
 }
 
 .contactModule {
@@ -460,7 +454,12 @@ body {
         width: 55%;
 
         p {
-            margin-bottom: 42px;
+            margin: 18px 0 36px 0;
+        }
+
+        .btnPrimaire {
+            display: block;
+            width: 118px;
         }
     }
 
