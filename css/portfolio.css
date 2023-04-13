@@ -296,6 +296,18 @@ body button {
   transition: opacity 1s;
 }
 
+.moreProject {
+  margin: 80px 0 42px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.moreProject .btnPrimaire {
+  margin-top: 20px;
+  width: 182px;
+}
+
 .contactModule {
   width: 60%;
   position: relative;
